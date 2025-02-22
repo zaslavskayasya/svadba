@@ -9,14 +9,14 @@ const htmlFiles = fs.readdirSync(path.resolve(__dirname, 'src'))
   .map(file => new HtmlWebpackPlugin({
     filename: file,
     template: `./src/${file}`,
-    publicPath: './' // Додаємо це
+
   }));
 
 module.exports = {
   entry: './src/scss/style.scss',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: './', 
+
   },
   module: {
     rules: [

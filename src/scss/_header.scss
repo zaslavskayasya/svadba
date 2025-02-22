@@ -148,11 +148,11 @@ body {
     }
   }
   
-  .social-block {
+  .meet-us {
     display: flex;
     margin: 0 auto 28px;
     justify-content: center;
-    .social-block-item {
+    .meet-us-item {
       margin: 0px 17px 0px 0px;
       svg {
         width: 42px;
@@ -327,6 +327,10 @@ body {
       position: absolute;
       top: 10px;
       right: 20px;
+      z-index: 25;
+    }
+    .dropbtn{
+      z-index: 25;
     }
     .dropdown-content {
       left: -63px;
@@ -361,7 +365,7 @@ body {
       }
 
 
-    .social-block {
+    .meet-us {
       display: flex;
       margin: 0 auto 28px;
       justify-content: center;
@@ -369,7 +373,7 @@ body {
       right: 20px;
       top: 168px;
       flex-direction: column;
-      .social-block-item {
+      .meet-us-item {
         margin: 0px 11px 32px 0px;
         cursor: pointer;
       }
@@ -393,7 +397,7 @@ body {
       width: 172px;
       z-index: 999;
     }
-    .social-block .social-block-item svg:last-child {
+    .meet-us .meet-us-item svg:last-child {
       width: 26px;
     }
     .dropdown-content {
@@ -459,17 +463,17 @@ body {
       top: 163px;
       z-index: 22;
     }
-    .social-block {
+    .meet-us {
       right: 31px;
       top: 258px;
     }
-    .social-block .social-block-item svg:last-child {
+    .meet-us .meet-us-item svg:last-child {
       width: 34px;
     }
     .contacts-list_item span{
       width: 35px;
     }
-    .social-block .social-block-item {
+    .meet-us .meet-us-item {
       margin: 0px 7px 47px 0px;
     }
   }
