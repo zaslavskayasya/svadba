@@ -70,38 +70,21 @@ handleResize();
 // Додаємо слухач події на зміну розміру вікна
 window.addEventListener('resize', handleResize);
 
-  
-// let MenuContent = document.querySelector('.box');
-// let replacedContent = MenuContent.innerHTML;
 
-
-// if(window.innerWidth > 760){
-//   header.insertAdjacentHTML('afterend', replacedContent);
-// }
-
-// window.addEventListener('resize', () => {
-//   if(window.innerWidth > 760){
-//     if(MenuContent){
-//       header.insertAdjacentHTML('afterend', replacedContent);
-
-//     }
-//   } else {
-//     if(!MenuContent){
-//       let newBox = document.createElement("div");
-//       header.insertAdjacentHTML('afterend', newBox );
-  
-//       let content1 = document.querySelector('menu');
-//       let content2 = document.querySelector('.contacts-box');
-  
-//       let ClonedConten1 = content1;
-//       let ClonedConten2 = content2;
-  
-//       content1.remove();
-//       content2.remove();
-      
-//       newBox.insertAdjacentElement('afterbegin', ClonedConten2);
-//       newBox.insertAdjacentElement('afterbegin', ClonedConten1);
-//     }
-
-//   }
-// });
+$('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:10,
+  dots: false,
+  nav:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:5
+      }
+  }
+})
