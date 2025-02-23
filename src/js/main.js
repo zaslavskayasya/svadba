@@ -75,8 +75,8 @@ $('.owl-carousel').owlCarousel({
   loop:true,
   margin:10,
   dots: false,
-  nav:true,
-  responsive:{
+  nav: false,
+  responsive: {
       0:{
           items:1
       },
@@ -84,7 +84,88 @@ $('.owl-carousel').owlCarousel({
           items:3
       },
       1000:{
-          items:5
+          items:1,
+          center:true
+          // margin:50,
       }
   }
 })
+
+let owl = $(".owl-carousel");
+	owl.owlCarousel();
+	$(".next-btn").click(function () {
+		owl.trigger("next.owl.carousel");
+	});
+	$(".prev-btn").click(function () {
+		owl.trigger("prev.owl.carousel");
+	});
+	$(".prev-btn").addClass("disabled");
+	$(owl).on("translated.owl.carousel", function (event) {
+		if ($(".owl-prev").hasClass("disabled")) {
+			$(".prev-btn").addClass("disabled");
+		} else {
+			$(".prev-btn").removeClass("disabled");
+		}
+		if ($(".owl-next").hasClass("disabled")) {
+			$(".next-btn").addClass("disabled");
+		} else {
+			$(".next-btn").removeClass("disabled");
+		}
+	});
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   const footer = document.querySelector(".footer");
+//   const bgImage = footer.getAttribute("data-bg");
+//   footer.style.background = `url(${bgImage}) center/cover no-repeat`;
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  let footer = document.querySelector(".footer");
+  let bgImage = footer.getAttribute("data-bg");
+
+  if (bgImage) {
+      footer.style.setProperty("--footer-bg", `url('${bgImage}')`);
+  }
+});
+
+
+let acc = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+
+
+
+// let acc = document.getElementsByClassName("accordion");
+// let i;
+
+// for (i = 0; i < acc.length; i++) {
+//   acc[i].addEventListener("click", function() {
+//     /* Toggle between adding and removing the "active" class,
+//     to highlight the button that controls the panel */
+//     this.classList.toggle("active");
+
+//     /* Toggle between hiding and showing the active panel */
+//     var panel = this.nextElementSibling;
+//     if (panel.style.height === "auto") {
+//       panel.style.height = "0px";
+//     } else {
+//       panel.style.height = "auto";
+//     }
+//   });
+// }
+
+
