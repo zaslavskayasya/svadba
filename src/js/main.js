@@ -300,3 +300,81 @@ function showError(element, message) {
     element.style.borderBottom = '2px solid red';
   }
 }
+
+
+
+
+
+
+
+
+let lastScrollTop = 0;
+
+let debounceTimeout;
+let scrollThreshold = 5; // Поріг прокрутки, щоб не реагувати на невеликі зміни
+
+window.addEventListener('scroll', function() {
+    clearTimeout(debounceTimeout);
+
+    debounceTimeout = setTimeout(() => {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) {
+            // Ігноруємо невеликі зміни прокрутки
+            return;
+        }
+
+        lastScrollTop = scrollTop;
+    }, 100); // Збільшена затримка для більш плавного ефекту
+});
+
+
+// filteredMenuItems.forEach(item => {
+//   item.classList.add('sanimate', 'fadeInLeft');
+// })
+
+
+
+let blocks = document.querySelectorAll('.scroll.sanimate');
+// let clientsSlides = document.querySelectorAll('.clients-slider > .slide.sanimate');
+
+let observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add('fadeInUp');
+          observer.unobserve(entry.target);
+      }
+  });
+};
+
+blocks.forEach(block => {
+  new IntersectionObserver(observerCallback, {
+      threshold: 0.3
+  }).observe(block);
+});
+
+let allTexts = document.querySelectorAll('p, h2');
+allTexts?.forEach(item => {
+    if (!item.closest('.main-slider'))
+        item.classList.add('sanimate', 'fadeInUp');
+});
+
+
+let animations = document.querySelectorAll('.sanimate');
+animations.forEach(el => {
+    let {
+        delay,
+        duration,
+        timing
+    } = el.dataset;
+
+    if (delay)
+        el.style.animationDelay = delay;
+
+    if (duration)
+        el.style.animationDuration = duration;
+
+    if (timing)
+        el.style.animationTimingFunction = timing;
+});
+
