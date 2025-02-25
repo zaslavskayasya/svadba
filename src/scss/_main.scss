@@ -65,6 +65,7 @@ body.no-scroll {
 
 .main-screen {
   position: absolute;
+  overflow-x: hidden;
   // position: static;
   top: 0px;
   width: 100%;
