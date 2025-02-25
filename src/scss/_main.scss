@@ -1,6 +1,15 @@
 @use "_color" as c;
 
 
+body.no-scroll {
+  overflow: hidden;
+}
+
+.box {
+  max-height: 100vh; /* Обмежує висоту */
+  overflow-y: auto; /* Дозволяє прокрутку всередині */
+}
+
 .hide,
 .sanimate {
     opacity: 0;
@@ -1030,6 +1039,7 @@ input:focus {
   .texts-part{
     padding-left: 29px;
     padding-right: 10px;
+    padding-bottom: 40px;;
   }
 }
 

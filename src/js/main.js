@@ -1,17 +1,22 @@
 let triggerMenu = document.querySelector('.burger-trigger');
 let header = document.querySelector('#header');
 let box = document.querySelector('.box');
+let body = document.body; // Отримуємо body
 
-if (triggerMenu && header) {
+if (triggerMenu && header && box) {
     triggerMenu.addEventListener('click', () => {
-        header.classList.toggle('active');
+        let isActive = header.classList.toggle('active');
         box.classList.toggle('active');
+
+        if (isActive) {
+            body.classList.add('no-scroll'); // Блокуємо прокрутку сторінки
+        } else {
+            body.classList.remove('no-scroll'); // Відновлюємо прокрутку
+        }
     });
 } else {
-    console.error('Елемент .burger-trigger або header не знайдено в DOM.');
+    console.error('Елемент .burger-trigger, #header або .box не знайдено в DOM.');
 }
-
-console.log('test');
 
 
 function myFunction() {
@@ -80,7 +85,7 @@ $('.owl-carousel').owlCarousel({
       0:{
           items:1
       },
-      600:{
+      790:{
           items:3
       },
       1000:{
