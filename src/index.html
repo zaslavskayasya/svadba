@@ -282,7 +282,6 @@
                             постарались предоставить развернутые ответы на них.
                             Не нашли свой вопрос - ответ?
                             <a href="#" class="text-link">Свяжитесь с нами</a>
-
                         </p>
                     </div>
                     <div class="tabs-side">
@@ -317,59 +316,107 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-        <div>
-            <section class="gallery">
+        <div class="wawe-gallery">
+            <div class="gallery">
                 <div class="gallery-item">
-                    <div class="image-wrapper">
-                        <img src="./images/photo1.webp" alt="Свaдьбы">
+                    <a class="image-wrapper">
+                        <img src="./images/slider/1.webp" alt="Свaдьбы">
                         <a href="#" class="overlay">Свaдьбы</a>
-                    </div>
+                    </a>
                 </div>
                 <div class="gallery-item">
-                    <div class="image-wrapper">
-                        <img src="./images/photo1.webp" alt="Не свaдьбы">
+                    <a href="#" class="image-wrapper">
+                        <img src="./images/slider/2.webp" alt="Не свaдьбы">
                         <a href="#" class="overlay">Не свaдьбы</a>
-                    </div>
+                    </a>
                 </div>
                 <div class="gallery-item">
-                    <div class="image-wrapper">
-                        <img src="./images/photo1.webp" alt="О нас">
+                    <a href="#" class="image-wrapper">
+                        <img src="./images/slider/3.webp" alt="О нас">
                         <a href="#" class="overlay">О нас</a>
-                    </div>
+                    </a>
                 </div>
                 <div class="gallery-item">
-                    <div class="image-wrapper">
-                        <img src="./images/photo1.webp" alt="Обучение">
+                    <a href="#" class="image-wrapper">
+                        <img src="./images/slider/4.webp" alt="Обучение">
                         <a href="#" class="overlay">Обучение</a>
-                    </div>
+                    </a>
                 </div>
                 <div class="gallery-item">
-                    <div class="image-wrapper">
-                        <img src="./images/photo1.webp" alt="Блог">
+                    <a href="#" class="image-wrapper">
+                        <img src="./images/slider/5.webp" alt="Блог">
                         <a href="#" class="overlay">Блог</a>
-                    </div>
+                    </a>
                 </div>
                 <div class="gallery-item">
-                    <div class="image-wrapper">
-                        <img src="./images/photo1.webp" alt="Контакты">
+                    <a href="#" class="image-wrapper">
+                        <img src="./images/slider/6.webp" alt="Контакты">
                         <a href="#" class="overlay">Контакты</a>
-                    </div>
+                    </a>
                 </div>
-            </section>
+            </div>
         </div>
 
+        <div class="forms-block form-section">
+            <div class="container-main">
+                <div class="two-sides">
+                    <div class="texts-side">
+                        <h2 class="h2 type-1">
+                            Пишите, обсудим детали
+                        </h2>
+                        <p class="strange-big-text">
+                            Остались вопросы и не терпиться приступить к планированию? Оставляйте заявку и мы свяжемся с вами
+                        </p>
+                    </div>
+                    <div class="tabs-side">
+                        <form id="application-form" method="post" action="send.php" class="hidden-element">
 
+                            <div class="group-input">
+                              <label for="name">Как к вам обращаться?</label>
+                              <input type="text" id="name" name="name" placeholder="Введите ваше имя">
+                            </div>
+                          
+                            <div class="group-input">
+                              <label for="phone">Как с вами связаться?</label>
+                              <input type="text" id="phone" name="phone" placeholder="Введіть телефон">
+                            </div>
+                          
+                            <div class="group-input">
+                              <label for="email">Куда вам написать?</label>
+                              <input type="text" id="email" name="email" placeholder="Введіть пошту">
+                            </div>
+                          
+                            <div class="checkbox2">
+                              <input type="checkbox" id="data-agreement" checked>
+                              <label for="data-agreement">Я згоден (-на) на обробку персональних даних</label>
+                              <small class="error" style="display: none;">Це поле має бути заповнене</small>
+                            </div>
+                            
+                            <button type="submit" class="button form-btn">
+                              Поехали
+                            </button>
+                          
+                          </form>
+                          
+                          <!-- <div id="popup" class="hidden">
+                            <p>Форма успішно відправлена!</p>
+                            <button class="close">Закрити</button>
+                          </div> -->
+                        </div>
 
-        <footer class="footer" data-bg="../images/photo1.webp">
+                    </div>
+                </div>
+        </div>
+    
+        <footer class="footer" data-bg="./images/footer.webp">
             <div class="footer-content">
                 <!-- Логотип -->
                 <a href="#" class="footer-logo">
-                    <img src="images/icons/skoro-svadba.svg" alt="Логотип">
+                    <img src="./images/icons/skoro-svadba.svg" alt="Логотип">
                 </a>
 
                 <!-- Меню -->
@@ -430,7 +477,7 @@
                 </ul>
 
                 <!-- Соціальні іконки -->
-                <div class="footer-social">
+                <div class="footer-capitali">
                     <a href="#" class="social-icon">
                         <svg width="30" height="30" viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none" />
@@ -454,6 +501,14 @@
         </footer>
     </div>
 
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+          <span class="close">
+            <img src="./images/icons/close.svg" alt="">
+          </span>
+          <p class="norm-text popup-text">Дякуємо за звернення, наш менеджер зв'яжеться з вами.</p>
+        </div>
+      </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

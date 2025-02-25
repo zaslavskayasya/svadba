@@ -5,8 +5,8 @@
   // position: static;
   top: 0px;
   width: 100%;
-  padding: 125px 20px 20px 20px;
-  background: linear-gradient(#fff 0%, #fff 600px, #f7f7f7 600px, #f7f7f7 100%);
+  padding: 125px 0px 0px 0px;
+  background: linear-gradient(#fff 0%, #fff 600px, #f7f7f7 600px,  #fff 100%);
 }
 
 .wrap-main-pic {
@@ -177,8 +177,10 @@
   display: block;
   text-align: center;
   font-weight: 800;
+  cursor: pointer;
   transition: all ease 0.3s;
   max-width: 300px;
+  background-color: transparent;
   &:hover {
     background-color: c.$accent-color;
     color: #fff;
@@ -187,6 +189,7 @@
 
 .about-section {
   position: relative;
+  background-color: #F2F2F2;
 }
 
 .pics-wrap {
@@ -248,6 +251,8 @@
 .slider-block {
   padding: 19px 0px 30px;
   position: relative;
+  background-color: #F7F7F7;
+
   .type-1{
     font-size: 32px;
     max-width: 250px;
@@ -376,27 +381,29 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    padding: 20px;
+    padding: 0px 20px 50px;
 }
 
 /* Картка */
 .gallery-item {
-    flex: 1 1 calc(50% - 10px); /* 2 колонки на мобільному */
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
+  width: 48%;
+  height: 167px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 /* Обгортка для картинки */
 .image-wrapper {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 169px;
+    height: 145px;
 }
 
 .image-wrapper img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: transform 0.4s ease, filter 0.4s ease;
 }
@@ -410,7 +417,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.27); /* Затемнення 27% */
-    transition: background 0.4s ease;
+    transition: background 0.3s ease;
 }
 
 /* Текст-посилання */
@@ -420,7 +427,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     text-align: center;
@@ -436,54 +443,52 @@
     background: rgba(0, 0, 0, 0.15); /* Затемнення слабшає */
 }
 
+.form-section{
+  padding: 50px 0px
+
+}
 
 
 .footer {
-    position: relative;
-    padding: 40px 15px;
-    color: white;
-    text-align: center;
-    overflow: hidden;
+  position: relative;
+  padding: 40px 15px;
+  color: #000;
+  text-align: center;
+  // overflow: hidden;
 }
 
 /* Псевдоелемент для прозорого фону */
 .footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--footer-bg) center/cover no-repeat;
-    opacity: 0.3; /* 30% прозорості */
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3; /* 30% прозорості */
+  z-index: 1; /* Щоб фон був позаду */ 
+  color: #000;
 }
-.footer-content {
-    position: relative;
-    z-index: 1;
-}
-// /* Фон через JS */
-// .footer {
-//     padding: 40px 15px;
-//     color: white;
-//     text-align: center;
-//     min-height: 700px;;
-//     background-color: rgba(0, 0, 0, 0.3); /* Чорний напівпрозорий шар */
-//     background-blend-mode: darken; /* Змішує зображення і колір */
-// }
 
-// /* Контент футера */
-// .footer-content {
-//     max-width: 300px;
-//     margin: 0 auto;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// }
+.footer-content {
+  position: relative;
+  z-index:3;
+  max-width: 300px;
+  margin: 0 auto;
+}
 
 /* Логотип */
-.footer-logo img {
-    width: 100px;
+.footer-logo {
+  width: 240px;
+  min-width: 240px;
+  display: block;
+  margin: 10px auto 60px ;
+  img {
+      width: 100%;
+  }
 }
 
 /* Меню */
@@ -500,7 +505,6 @@
 }
 
 .footer-menu a {
-    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -524,7 +528,6 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -534,7 +537,7 @@
 }
 
 .footer-info .icon svg {
-    stroke: white;
+
     transition: stroke 0.3s;
 }
 
@@ -543,18 +546,18 @@
 }
 
 /* Соцмережі */
-.footer-social {
+.footer-capitali {
     display: flex;
     gap: 20px;
     margin: 20px 0;
 }
 
-.footer-social .social-icon svg {
-    stroke: white;
+.footer-capitali .social-icon svg {
+
     transition: stroke 0.3s;
 }
 
-.footer-social .social-icon:hover svg {
+.footer-capitali .social-icon:hover svg {
     stroke: #FFD700;
 }
 
@@ -565,7 +568,7 @@
 }
 
 .footer-text a {
-    color: white;
+
     text-decoration: none;
 }
 
@@ -574,6 +577,7 @@
 }
 
 .tabs-block{
+ 
 
 }
 
@@ -692,8 +696,214 @@ a.text-link{
 }
 
 .tabs-side{
-
 }
+
+
+form {
+  margin-top: 20px;
+  max-width: 300px;;
+  margin: 0 auto;
+}
+
+label {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+
+input {
+  font-family: inherit;
+  display: block;
+  width: calc(100% - 147px);
+  margin: 9px 0;
+  padding: 5px 0px;
+  border: none;
+  border-bottom: 1px solid #E6E6E6;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 200%;
+  color: #BFB2B2;
+  background-color: transparent;
+  width: 100%;
+}
+
+input::placeholder{
+  font-family: inherit;
+  font-size: 13px;
+  color: #878787;
+}
+
+input:focus {
+  color: black;
+  outline: none;
+}
+
+input:focus {
+  color: #000;
+  border-bottom-color: #81c825;
+  outline: none;
+}
+
+.group-input{
+  margin-bottom: 59px;
+}
+.checkbox, .checkbox2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 25px;;
+}
+
+.checkbox input[type="checkbox"], .checkbox2 input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox label, .checkbox2 label {
+  display: block;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 400;
+  position: relative;
+  padding-left: 40px;
+}
+
+.checkbox label:before, .checkbox2 label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/* Іконка галочки */
+.checkbox input[type="checkbox"]:checked + label:before,
+.checkbox2 input[type="checkbox"]:checked + label:before {
+  background-image: url('../images/icons/check.svg'); /* Вкажи шлях до своєї картинки галочки */
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/* Текст посилання в чекбоксі */
+.checkbox label a, .checkbox2 label a  {
+  text-decoration: underline;
+  color: black;
+}
+
+.checkbox small, .checkbox2 small{
+  position: absolute;
+  bottom: -25px;
+}
+
+/* Помилки валідації */
+.checkbox .error, .checkbox2 .error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block; /* Щоб показати помилку під чекбоксом */
+}
+
+.checkbox input[type="checkbox"].error + label:before,
+.checkbox2 input[type="checkbox"].error + label:before {
+  border-color: red;
+}
+
+/* Коли все в порядку, прибираємо червону рамку */
+.checkbox input[type="checkbox"]:checked + label:before,
+.checkbox2 input[type="checkbox"]:checked + label:before {
+  border-color: black;
+}
+
+.submit-btn {
+  background-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  font-size: 22px;
+  padding: 44px 20px;
+  position: absolute;
+  left: 0px;
+  bottom: 164px;
+  margin-top: 20px;
+  width: 100%;
+  text-align: left;
+  padding-left: 140px;
+  font-weight: 600;
+  transition: all ease 0.3s;
+  color: #000;
+}
+
+.arrow {
+  margin-left: 10px;
+  transition: margin-left 0.3s;
+}
+
+.submit-btn:hover{
+  background-color: #f0c079;
+}
+
+.submit-btn.active{
+  background-color: #f0c079;
+}
+
+
+.submit-btn:hover .arrow {
+  margin-left: 16px;
+}
+
+/* Попап */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Затемнення фону */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Вперед всіх елементів */
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  width: 25px;
+}
+.popup-text{
+  padding-top: 50px;
+  max-width: 80%;
+  margin: 0 auto 50px;
+}
+
+.popup .close img{
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
 
 
 @media (min-width: 340px) {
@@ -909,7 +1119,7 @@ a.text-link{
       order: 3;
   }
 
-  .footer-social {
+  .footer-capitali {
       order: 1;
   }
 
@@ -1024,10 +1234,10 @@ a.text-link{
       position: absolute;
       top: 0px;
       left: -394px;
-      background-color: #fff ;
+      background-color: #F7F7F7 ;
       z-index: 9;
     }
- }
+  }
   .owl-carousel .owl-stage-outer{
     overflow: visible;
   }
@@ -1081,8 +1291,26 @@ a.text-link{
     line-height: 133%;
     max-width: 523px;
    }
+  .wawe-gallery{
+    padding: 100px 20px;
+    background-image: url(../images/wawe.png);
+    background-repeat: no-repeat;
 
-
+  }
+  .gallery-item {
+    width: 48%;
+    height: 221px;
+  }
+  form {
+    margin-top: 20px;
+    max-width: 500px;
+  }
+  label {
+    font-size: 20px;
+  }
+  input::placeholder{
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -1164,6 +1392,12 @@ a.text-link{
     p {
         margin-bottom: 35px;;
     }
+  }
+  .gallery-item {
+    height: 267px;
+  }
+  .overlay{
+    font-size: 21px;
   }
 }
 
@@ -1283,7 +1517,10 @@ a.text-link{
     height: 702px;
   }
   .about-section {
-    padding-bottom: 293px;
+    padding-bottom: 93px;
+  }
+  .slider-block {
+    padding: 533px 0px 30px;
   }
   .pics-wrap .wrap-pic-small {
     top: 431px;
@@ -1299,6 +1536,11 @@ a.text-link{
     height: 307px;
     right: 0px;
     bottom: -205px;
+  }
+  .forms-block{
+    max-width: 89%;
+    margin: 0px auto;
+    padding: 50px 0px;
   }
 }
 
@@ -1392,7 +1634,7 @@ a.text-link{
     height: 660px;
     top: 0px;
     left: -534px;
-    background-color: rgb(254, 254, 254)7f7;
+    background-color: #F7F7F7 ;
   }
   .owl-images {
     width: 100%;
@@ -1415,6 +1657,66 @@ a.text-link{
     width: 100%;
     margin-top: 49px;
     margin-left: 86px;
+  }
+  .overlay {
+    font-size: 27px;
+  }
+  .gallery-item {
+    height: 307px;
+    height: 307px;
+    margin: 0px 11px;
+    border-radius: 25px;;
+  }
+  .gallery-item:nth-child(2) {
+    transform: translateY(-69px);
+  }
+  .gallery-item:nth-child(3) {
+    transform: translateY(0px);
+  }
+  .gallery-item:nth-child(4) {
+    transform: translateY(-108px);
+  }
+  .gallery-item:nth-child(5) {
+    transform: translateY(0px);
+  }
+  .gallery-item:nth-child(6) {
+    transform: translateY(-108px);
+  }
+  .wawe-gallery{
+    padding: 260px 0px 140px;
+  }
+  .texts-side .type-1 {
+    margin: -4px auto 81px 92px;
+    font-size: 72px;
+  }
+  .forms-block {
+    .two-sides{
+      justify-content: flex-start;  
+    }
+  }
+  .strange-big-text {
+    padding: 56px 93px 22px;
+  }
+  form {
+    margin-top: 79px;
+  }
+  label {
+    font-size: 23px;
+  }
+  input::placeholder{
+    font-size: 20px;
+  }
+  .group-input {
+    margin-bottom: 69px;
+  }
+  .checkbox label{
+    font-size: 15px;
+  }
+  .checkbox label:before{
+    top: 5px;
+  }
+  .forms-block .button{
+    margin: 50px 0px;
   }
 }
 
