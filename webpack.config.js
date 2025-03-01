@@ -9,14 +9,13 @@ const htmlFiles = fs.readdirSync(path.resolve(__dirname, 'src'))
   .map(file => new HtmlWebpackPlugin({
     filename: file,
     template: `./src/${file}`,
-
+    minify: false, // Вимикаємо мініфікацію HTML
   }));
 
 module.exports = {
   entry: './src/scss/style.scss',
   output: {
     path: path.resolve(__dirname, 'dist'),
-
   },
   module: {
     rules: [
@@ -30,25 +29,28 @@ module.exports = {
     new MiniCssExtractPlugin({ filename: 'css/style.css' }),
     ...htmlFiles,
     new CopyWebpackPlugin({
-        patterns: [
-          { from: 'src/images', to: 'images', noErrorOnMissing: true },
-          { from: 'src/fonts', to: 'fonts', noErrorOnMissing: true },
-          { from: 'src/js', to: 'js', noErrorOnMissing: true },
-        ],
-      }),      
+      patterns: [
+        { from: 'src/images', to: 'images', noErrorOnMissing: true },
+        { context: 'src', from: 'fonts/**/*', to: '' }, // Зберігаємо структуру
+        { from: 'src/js', to: 'js', noErrorOnMissing: true },
+      ],
+    }),
   ],
   devServer: {
     static: path.resolve(__dirname, 'dist'),
     hot: true,
     watchFiles: {
-        paths: ['src/**/*.html', 'src/js/**/*.js', 'src/scss/**/*.scss'],
-        options: {
-          usePolling: true,
-        },
-      },      
+      paths: ['src/**/*.html', 'src/js/**/*.js', 'src/scss/**/*.scss'],
+      options: {
+        usePolling: true,
+      },
+    },
     port: 3000,
     open: true,
   },
   mode: 'development',
   devtool: 'source-map',
+  optimization: {
+    minimize: false, // Вимикаємо мініфікацію CSS та JS
+  },
 };
