@@ -27,7 +27,9 @@
 a.h2{
     display: inline-block;
     text-decoration: none;
-    transition: all ease 0.3;
+    transition: all ease 0.3s;
+    margin-bottom: 20px;
+    color: #000;
     &:hover{
         color: c.$accent-color
     }
@@ -54,12 +56,14 @@ a.h2{
 }
 
 .blog-main {
+    background: linear-gradient(#fff 0%, #fff 16%, #f7f7f7 16%, #fff 100%);
     .h1-main {
         padding-left: 25px;
         margin-bottom: 306px;
         margin-top: 31px;
         line-height: 1.3;
         letter-spacing: 10.1px;
+        font-weight: 400;
     }
     .wrap-main-pic {
         width: 338px;
@@ -75,6 +79,8 @@ a.h2{
 
 
 ul.breadcrumb {
+    display: flex;
+
     padding: 4px 16px 0px 25px;
     list-style: none;
     // background-color: #eee;
@@ -83,7 +89,7 @@ ul.breadcrumb {
     margin-top: 0px;;
   }  
   ul.breadcrumb li {
-    display: inline; 
+    // display: block; 
     font-size: 14px;
     font-family: inherit;
     a{
@@ -109,22 +115,39 @@ content: "/\00a0";
     padding-bottom: 150px;;
 }
 /* Pagination links */
+ul.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.center-paging{
+    display: flex;
+    align-items: center;
+
+}
 .pagination a {
     color: black;
     float: left;
-    padding: 8px 16px;
+    font-size: 15px;
+    padding: 8px 10px;
     text-decoration: none;
     transition: background-color .3s;
-  }
-  
-  /* Style the active/current link */
-  .pagination a.active {
-    background-color: dodgerblue;
-    color: white;
-  }
-  
-  /* Add a grey background color on mouse-over */
-  .pagination a:hover:not(.active) {background-color: #ddd;}
+    &.active, &:hover{
+        color: c.$accent-color;
+    }
+    &.disabled{
+        pointer-events: none;
+
+    }
+}
+.pagination a.prev:hover, .pagination a.next:hover {        
+    path  {
+        stroke:  c.$accent-color;
+        
+    }          
+}
+
+
 
 
 
@@ -136,11 +159,113 @@ content: "/\00a0";
     }
 }
 
+@media (min-width: 680px) {
+    .blog-main .wrap-main-pic {
+        width: 483px;
+        top: 68px;
+        right: -98px;
+    }
+    .container-blog {
+        width: 520px;
+    }
+    a.h2{
+        text-align: center;
+    }
+    .article, article{
+        text-align: center;
+    }
+    .date:before{
+        left: 160px;
+    }
+
+}
+
+@media (min-width: 760px) {
+    .blog-main .h1-main {
+        padding-left: 194px;
+        margin-bottom: 306px;
+        margin-top: 13px;
+        font-size: 40px;
+    }
+    .blog-main .wrap-main-pic {
+        width: 353px;
+        top: 191px;
+        right: 9px;
+    }
+    ul.breadcrumb {    
+        position: absolute;
+        top: 40px;
+        left: 223px;
+    }
+    .pagination a{
+        font-size: 20px;
+    }
+}
+
 @media (min-width: 1024px) {
+    article, .article{
+        position: relative;
+        text-align: left;;
+        .date{
+            position: absolute;
+            left: -200px;
+            top: 11px;
+        }
+        .date:before {
+            left: -15px;
+        }
+        a.h2{
+            margin-bottom: 32px;
+        }
+    }
+    .container-blog{
+        padding-top: 40px;
+    }
     .blog-main{
         .gold-text{
             max-width: 800px;
+            position: absolute;
+            left: 200px;
+            top: 500px;            
         }
+    }
+    .blog-main .h1-main {
+        padding-left: 248px;
+        margin-bottom: 221px;
+        margin-top: 13px;
+        font-size: 54px;
+    }
+    .blog-main .wrap-main-pic {
+        width: 454px;
+        top: 66px;
+        right: 49px;
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+    .blog-main .wrap-main-pic {
+        width: 583px;
+        top: -59px;
+        right: 155px;
+    }
+    .blog-main .h1-main {
+        padding-left: 244px;
+        margin-bottom: 221px;
+        margin-top: -59px;
+        font-size: 63px;
+    }
+    .blog-main {
+        background: linear-gradient(#fff 0%, #fff 19%, #f7f7f7 19%, #fff 100%);
+    }
+    .container-blog {
+        width: 820px;
+        padding-left: 100px;;
+    }
+    .article img, article img {
+        width: 100%;
+        height: 319px;
     }
 }
 
@@ -148,12 +273,105 @@ content: "/\00a0";
 @media (min-width: 1560px) {
     .blog-main{
         .wrap-main-pic {
-            right: 103px;
-            width: 857px;
-            top: -120px;
+            right: 200px;
+            width: 698px;
+            top: -85px;
         }
         h1{
             font-size: 60px;;
         }
+        .h1-main {
+            padding-left: 386px;
+            margin-bottom: 294px;
+            margin-top: -121px;
+            font-size: 63px;
+        }
+        .gold-text {
+            padding-left: 46px;
+            width: 320px;
+            max-width: 800px;
+            left: 283px;
+            top: 594px;
+        }
+    }
+    ul.breadcrumb {
+        top: 82px;
+        left: 359px;
+    }
+}
+
+@media (min-width: 1600px) {
+    ul.breadcrumb {
+        top: 82px;
+        left: 459px;
+        li{
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
+    .blog-main .h1-main {
+        padding-left: 477px;
+        margin-bottom: 350px;
+        margin-top: -118px;
+        font-size: 64px;
+    }
+    .blog-main .wrap-main-pic {
+        right: 252px;
+        width: 698px;
+        top: -83px;
+    }
+    .blog-main .gold-text {
+        padding-left: 46px;
+        width: 433px;
+        max-width: 938px;
+        left: 435px;
+        top: 626px;
+        font-size: 23px;
+        letter-spacing: 6px;
+    }
+    .gold-text:before {
+        width: 89px;
+        height: 100px;
+        top: -94px;
+        left: -56px;
+        transform: rotate(-37deg);
+    }
+    .container-blog {
+        width: 1195px;
+        padding-left: 0px;
+        padding-right: 200px;
+        margin-left: 467px;
+    }
+    .blog-main{
+        background: linear-gradient(#fff 0%, #fff 14%, #f7f7f7 14%, #fff 100%);
+        .h2 {
+            font-family: inherit;
+            font-size: 42px;
+        }
+        .date{
+            font-size: 20px;
+            left: -228px;
+            top: 18px;
+        }
+    }
+    .article img, article img {
+        width: 100%;
+        height: 567px;
+    }
+    .article, article {
+        margin-bottom: 107px;
+    }
+    .container-blog {    
+        padding: 40px 10px 238px;
+    }
+    ul.pagination {
+        padding-top: 101px;
+    }
+    .pagination a {
+        font-size: 37px;
+        padding: 8px 21px;
+    }
+    article a.h2, .article a.h2 {
+        margin-bottom: 67px;
     }
 }

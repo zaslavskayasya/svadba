@@ -671,6 +671,8 @@ body.no-scroll {
     margin: 20px auto 40px;
     display: flex;
     justify-content: space-between;
+    z-index: 9;
+
     a{
       max-height: 33px;
       svg{
@@ -1607,6 +1609,9 @@ input:focus {
   .footer-text{
     font-size: 15px;
   }
+  .middle-text{
+    max-width: 800px;;
+  }
   
 }
 
@@ -1719,21 +1724,23 @@ input:focus {
     gap: 30px;
     margin: 13px auto 0;
     width: 353px;
-    margin-right: 245px;
+    margin-right: 187px;
     margin-left: 0px;
   }
   .footer-logo {
-    margin-right: 221px;
+    margin-right: 116px;
   }
+
   .footer-content{
     justify-content: flex-start ;
+
   }
   .footer-menu ul {    
     margin-right: 129px;
   }
   .footer-info {    
     margin-bottom: 54px;
-    margin-left: 72px;
+    margin-left: 50px;
     margin-top: 27px;
     &.info2{
       padding-top: 6px;
@@ -1747,6 +1754,9 @@ input:focus {
     left: 3px;
     top: 153px;
     z-index: 99;
+  }
+  .footer-text {
+    align-items: anchor-center;
   }
   .middle-text{
     max-width: 40%;
