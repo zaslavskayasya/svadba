@@ -10,6 +10,9 @@
         border-radius: 18px;
         object-fit: cover;
     }
+    h2{
+        margin-top: 0px;;
+    }
 }
 
 
@@ -142,13 +145,164 @@ ul.pagination{
 }
 .pagination a.prev:hover, .pagination a.next:hover {        
     path  {
-        stroke:  c.$accent-color;
-        
+        stroke:  c.$accent-color;        
     }          
 }
 
 
+.content-part{
+    padding: 0px 20px 100px 20px;
+    margin: 0 auto;
+    p{
+        font-family: inherit;
+        line-height: 150%;
+        font-size: 17px;
+        color: #000;
+        margin-bottom: 46px;
+        padding: 0px 29px;
+    }
+    img{
+       height: 250px;
+       width: 100%;;
+       object-fit: cover;
+       border-radius: 18px;
+       margin-bottom: 46px; ;
 
+    }
+}
+
+.nav-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.prev-block, .next-block{
+    a{
+        display: flex;
+        font-family: inherit;
+        align-items: center;
+        color: #000;
+        font-size: 15px;
+        text-decoration: none;
+        transition: all ease 0.3s;
+        svg{
+            padding: 0px 5px;
+            min-width: 30px;
+            path{
+                transition: all ease 0.3s;
+            }
+
+        }
+        &:hover{
+            color: c.$accent-color;
+            svg{
+                path{
+                    stroke: c.$accent-color;
+                }
+            }
+
+        }
+    }
+    // span{
+    //     padding: 0px 10px;
+    //     transition: all ease 0.3s;
+
+    //     &:hover{
+    //         color: c.$accent-color;
+    //     }
+    // }
+}
+
+.next-block {
+    a{
+        height: 26px;;
+    }
+    svg{
+        height: 26px;;
+    }
+
+}
+
+
+.blog-one{
+    position: relative;
+    padding-top: 0px;
+    padding: 0px 0px 0px;
+    .header-picture{
+        width:98%;
+        height: 213px;   
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 18px;
+        margin: 28px auto 55px;
+
+    }
+    .blog-header{
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 18px;       
+    }
+    .overflow-black{
+        position: absolute;
+        left:0px;
+        top:0px;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        opacity: 0.3;
+        border-radius: 18px;
+        overflow: hidden;
+    }
+    .article-name{
+        font-family: inherit;
+        position: absolute;
+        top:45px;
+        z-index: 3;
+        color: #fff;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 139%;
+        font-size: 22px;
+        text-align: center;
+    }
+    .round-block{
+        position: absolute;
+        right: 0px;
+        bottom: -3px;
+        background-size: cover;
+        width: 199px;
+        height: 68px;
+        z-index: 6;
+        background-image: url('../images/icons/round.svg');
+    }
+    .date{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        z-index: 9;
+        margin-bottom: 5px;
+    }
+    .date:before{
+        left: -9px;
+    
+    }
+}
+
+  
+
+@media (min-width: 340px) {
+    .header-picture{
+        max-width: 321px;
+    }
+}
 
 
 @media (min-width: 360px) {
@@ -178,6 +332,7 @@ ul.pagination{
         left: 160px;
     }
 
+
 }
 
 @media (min-width: 760px) {
@@ -199,6 +354,24 @@ ul.pagination{
     }
     .pagination a{
         font-size: 20px;
+    }
+    .content-part img {
+        height: 450px;
+    }
+    .blog-one {
+        position: absolute;
+        top: 100px;
+        .header-picture {
+            max-width: 64%;
+            height: 350px;;
+            margin-left: 180px;;
+        }
+        .article-name {
+            top: 33%;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 294px;;
+        }
     }
 }
 
@@ -240,6 +413,11 @@ ul.pagination{
         top: 66px;
         right: 49px;
     }
+    .content-part {
+        padding: 0px 134px 100px 20px;
+        margin: 0 auto;
+        max-width: 74%;
+    }
 
 }
 
@@ -266,6 +444,31 @@ ul.pagination{
     .article img, article img {
         width: 100%;
         height: 319px;
+    }
+    .blog-one {
+
+        .header-picture {
+            max-width: 75%;
+        }
+    }
+
+}
+
+@media (min-width: 1300px) {
+    .blog-one{
+        .header-picture {
+           max-width: 79%;
+           height: 495px;
+        }
+        .round-block {
+            right: 0px;
+            bottom: -3px;
+            width: 247px;
+            height: 86px;
+        }
+        .blog-one .overflow-black {
+            opacity: 0.5;
+        }
     }
 }
 

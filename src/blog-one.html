@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skoro Svadba</title>
+    <title>Skoro Svadba blog</title>
 
     <link rel="stylesheet" href="./css/style.css">
 
@@ -41,7 +41,8 @@
 </header>
 <ul class="breadcrumb">
     <li><a href="#">Главная</a></li>
-    <li>Блог</li>
+    <li><a href="#">Блог</a></li>
+    <li>Арина и Андрей</li>
   </ul>
 <div class="box">
     <menu>
@@ -130,59 +131,56 @@
         </div>
     </div>
 </div>
-<div class="main-screen blog-main">
-    <h1 class="h1-main scroll sanimate " data-delay="100ms">
-        Блог <br>  свадебного <br> агентства
-    </h1>
-    <div class="wrap-main-pic scroll sanimate" data-delay="100ms">
-        <img src="./images/blog-main.webp" alt="bride">
-    </div>
-    <p class="gold-text scroll sanimate" data-delay="200ms">
-        Нам есть, что вам показать
-    </p>
-    <div class="container-blog">
-        <article class="article">
-            <h2><a href="#" class="h2">Казкове весілля в ресторані Yug</a> </h2>
-            <div class="date">27.03.2024</div>
-            <img src="./images/im1.webp" alt="image">
-        </article>
-        <article class="article">
-            <h2><a href="#" class="h2">Казкове весілля в ресторані Yug</a> </h2>
-            <div class="date">2.03.2005</div>
-            <img src="./images/im1.webp" alt="image">
-        </article>
-        <article class="article">
-            <h2> <a href="#" class="h2">Казкове весілля в ресторані Yug</a> </h2>
-            <div class="date">2.03.2005</div>
-            <img src="./images/im1.webp" alt="image">
-        </article>
 
-        <ul class="pagination">
-            <li>
+<div class="main-screen blog-one">
+    <div class="header-picture">
+        <img class="blog-header" src="./images/nridge.webp" alt="main-blog">
+        <div class="overflow-black"></div>
+        <h1 class="article-name"> 
+            Свадьба Арины и Андрея
+        </h1>
+        <div class="round-block">
+        </div>
+        <div class="date">27.03.2024</div>
+    </div>
+    <div class="content-part">
+        <p class="normal-text">
+            Одне весілля виходить дуже шумне, інше душевне, одне романтичне, інше веселе. Буває масштабне, а буває камерне.
+        </p>
+        <img src="./images/im1.webp" alt="illustrate">
+        <p class="normal-text">
+            Буває весілля несеться так швидко, а буває, що день настільки повільний і гарний.
+        </p>
+        <img src="./images/im2.webp" alt="illustrate">
+        <p class="normal-text">
+            Іноді навіть команда починає пританцьовувати, а на іншому весіллі ми стоїмо і просто витираємо сльози від щирості та краси моменту.
+        </p>
+        <img src="./images/im3.webp" alt="illustrate">
+        <p class="normal-text">
+            Дійсно кожне унікальне та, в буквальному сенсі, неповторне! І ми завжди щиро проживаємо такі різні ємоціі з вами.
+        </p>
+        <div class="nav-block">
+            <div class="prev-block">
                 <a href="#" class="prev" aria-label="попередня сторінка">                    
                     <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13 5.99071L1.14067 6M5.65867 1L1 6L5.65867 11" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
+                    <span class="name">Попередня</span>
                 </a>
-            </li>
-            <span class="center-paging">
-                <li><a href="#">1</a></li>
-                <li><a href="#" class="active">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#" class="disabled">...</a></li> 
-                <li><a href="#">18</a></li>                
-            </span>
-            <li>
-                <a href="#" class="next" aria-label="наступна сторінка">
+            </div>
+            <div class="next-block">
+                <a href="#" class="next" aria-label="наступна історія">
+                    <span class="name">Наступна</span>
                     <svg width="47" height="37" viewBox="0 0 47 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.999999 18.4675L45.4725 18.5M28.53 0.999997L46 18.5L28.53 36" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
 
-    <footer class="footer" data-bg="./images/footer.webp">
+
+    <footer class="footer" data-bg="./images/nridge.webp">
         <div class="footer-content">
             <!-- Логотип -->
             <a href="#" class="footer-logo">
@@ -282,9 +280,8 @@
             </div>
         </div>
     </footer>
-
 </div>
-    
+
 <script src="./js/main.js"></script>
 </body>
 </html>
