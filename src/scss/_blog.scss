@@ -83,13 +83,13 @@ a.h2{
 
 ul.breadcrumb {
     display: flex;
-
     padding: 4px 16px 0px 25px;
     list-style: none;
     // background-color: #eee;
     position: relative;
     z-index: 5;
-    margin-top: 0px;;
+    margin-top: 0px;
+    z-index: 20;
   }  
   ul.breadcrumb li {
     // display: block; 
@@ -104,9 +104,9 @@ ul.breadcrumb {
     }
 }  
 ul.breadcrumb li+li:before {
-padding: 8px;
-color: black;
-content: "/\00a0";
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
 }  
 //   ul.breadcrumb li a {color: green;}
 .blog-main{
@@ -226,6 +226,10 @@ ul.pagination{
 }
 
 
+.main-screen.blog-one{
+    background: #fff;
+}
+
 .blog-one{
     position: relative;
     padding-top: 0px;
@@ -296,7 +300,27 @@ ul.pagination{
     }
 }
 
-  
+.content-part{
+    position: relative;
+}
+
+.article-name-fixed{
+    position: fixed;
+    top: 600px;
+    width: 100px;
+    left: 15px;
+    .gold-text{
+        font-family: inherit;
+        color: c.$accent-color;
+        font-size: 14px;;
+    }
+    .gold-text:before {
+        transform: rotate(-6deg);
+        background-image: url(../images/icons/arrgoldtop.svg);
+    }
+}
+
+
 
 @media (min-width: 340px) {
     .header-picture{
@@ -417,6 +441,8 @@ ul.pagination{
         padding: 0px 134px 100px 20px;
         margin: 0 auto;
         max-width: 74%;
+        padding: 0px 140px 100px 0px;
+
     }
 
 }
@@ -469,11 +495,40 @@ ul.pagination{
         .blog-one .overflow-black {
             opacity: 0.5;
         }
+    }    
+    .content-part {
+        padding: 0px 140px 100px 0px;
+        margin: 0 auto;
+        margin-left: auto;
+        max-width: 74%;
+        margin-left: 14%;
+    }
+    .content-part p {
+        font-size: 19px;
+        padding-left:   0px;
+        margin-top: 0px;;
     }
 }
 
 
 @media (min-width: 1560px) {
+    .article-name-fixed {
+        position: fixed;
+        top: 600px;
+        width: 300px;
+        left: 123px;
+         .gold-text {
+            font-size: 21px
+        }
+        .gold-text:before {
+            width: 89px;
+            height: 100px;
+            top: -128px;
+            left: -63px;
+            
+        }
+    }
+
     .blog-main{
         .wrap-main-pic {
             right: 200px;
@@ -500,6 +555,56 @@ ul.pagination{
     ul.breadcrumb {
         top: 82px;
         left: 359px;
+    }
+    .blog-one .header-picture {
+        max-width: 72%;
+        margin-left: 326px;
+    }
+    .content-part {
+        max-width: 68%;
+        margin-left: 326px;
+    }
+    .blog-one .article-name {
+        top: auto;
+        bottom: 120px;
+        left: 52px;
+        transform: translateX(0%);
+        text-align: left;
+        font-size: 42px;
+        max-width: 46%;
+    }
+    .main-screen.blog-one{
+        background: #fff;
+    }
+    .blog-one .header-picture {
+        max-width: 72%;
+        margin-left: 326px;
+        margin-top: 78px;
+    }
+    .content-part p {
+        font-size: 24px;
+    }
+    .content-part img {
+        height: 535px;
+    }
+    .blog-one .round-block {
+        right: 0px;
+        bottom: 0;
+        width: 316px;
+        height: 107px;
+    }
+    .blog-one .date {
+        font-size: 20px;
+        position: absolute;
+        bottom: 13px;
+        right: 41px;
+    }
+    .blog-one .date:before {
+        left: -17px;
+        top: 2px;
+    }
+    .content-part {
+        padding: 0px 180px 100px 0px;
     }
 }
 
@@ -576,5 +681,43 @@ ul.pagination{
     }
     article a.h2, .article a.h2 {
         margin-bottom: 67px;
+    }
+    .blog-one .header-picture {
+        max-width: 72%;
+        height: 642px;
+    }
+    .blog-one .article-name {
+        top: auto;
+        bottom: 58px;
+        left: 112px;
+        transform: translateX(0%);
+        text-align: left;
+        font-size: 69px;
+        max-width: 72%;
+        letter-spacing: 16px;
+    }
+    .nav-block {
+        padding: 76px 10px;
+    }
+    .next-block a, .prev-block a {
+        height: 29px;
+        font-size: 24px;
+    }
+    .prev-block a  span{
+        padding: 0px 10px;
+    }
+    .prev-block a svg {       
+        min-width: 56px;
+        height: 20px;
+
+    }
+    .next-block a svg { 
+        min-width: 83px;
+        height: 51px;
+        margin-left: 20px;
+        margin-top: 4px;
+    }
+    .content-part {
+        padding: 0px 185px 100px 109px;
     }
 }
