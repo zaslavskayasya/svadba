@@ -645,7 +645,22 @@ ul.pagination{
     .pics-cont-wrap .cont-im2 {
         right: 46px;
     }
+    .contactpage-top .footer-info li a {
+         font-size: 17px;
+    }
+    menu li {
+        text-align: left;
+    }
 
+}
+
+@media (min-width: 1400px) {
+    .contactpage-top .footer-info li a {
+         font-size: 20px;
+    }
+     menu li {
+        text-align: left;
+    }
 }
 
 
