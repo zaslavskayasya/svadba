@@ -1370,6 +1370,7 @@ input:focus {
     margin-left: 200px;
     padding-right: 200px;
     position: relative;
+    min-height: 400px;
     &:before {
       content: "";
       width: 390px;
