@@ -804,6 +804,8 @@ body.no-scroll {
 .strange-big-text{
   padding: 3px 27px 20px;
   line-height: 133%;
+  text-align: center;
+  font-weight: 500;;
 }
 
 a.text-link{
@@ -1029,8 +1031,12 @@ input:focus {
   display: none;
 }
 
-
-
+.only-desktop{
+  display: none;
+}
+.only-mobile{
+  display: block;
+}
 
 @media (min-width: 340px) {
   .h1-main {
@@ -1259,6 +1265,12 @@ input:focus {
     position: absolute;
     top:100px;
     left:20px;
+  }
+  .only-desktop{
+    display: block;
+  }
+  .only-mobile{
+    display: none;
   }
 }
 
