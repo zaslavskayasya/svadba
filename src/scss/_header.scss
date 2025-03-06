@@ -256,19 +256,23 @@ body {
   .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 160px;
+    min-width: 75px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    color: c.$main-color;
-    padding: 6px 16px;
+    color: #000;
+    padding: 2px 13px;
+    top: 10px;
+    left: -67px;
+  
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 7px 14px;
     text-decoration: none;
     display: block;
+    font-size: 14px;
   }
   
   /* Change color of dropdown links on hover */
@@ -340,7 +344,11 @@ body {
     .dropdown-content {
       left: -63px;
       min-height: auto;
+      min-width: auto;
+      background-color: #fff;
+      z-index: 9;
     }
+
     menu {
       max-width: 300px;
       padding-left: 28px;
@@ -405,13 +413,7 @@ body {
     .meet-us .meet-us-item svg:last-child {
       width: 26px;
     }
-    .dropdown-content {
-      left: -18px;
-      min-height: auto;
-      min-width: auto;
-      background-color: #fff;
-      z-index: 9;
-    }
+
   }
   
   /* Для десктопів */
