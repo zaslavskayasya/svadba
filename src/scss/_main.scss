@@ -1,7 +1,13 @@
 @use "_color" as c;
 
 
-body.no-scroll {
+.no-scroll {
+  overflow: hidden;
+  height: 100vh; /* Фіксує висоту вікна */
+  touch-action: none; /* Забороняє свайпи на мобільних */
+}
+
+.no-scroll body {
   overflow: hidden;
 }
 

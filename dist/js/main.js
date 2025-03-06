@@ -1,7 +1,8 @@
 let triggerMenu = document.querySelector('.burger-trigger');
 let header = document.querySelector('#header');
 let box = document.querySelector('.box');
-let body = document.body; // Отримуємо body
+let body = document.body;
+let html = document.documentElement; // Додаємо обмеження на всю сторінку
 
 if (triggerMenu && header && box) {
     triggerMenu.addEventListener('click', () => {
@@ -9,15 +10,14 @@ if (triggerMenu && header && box) {
         box.classList.toggle('active');
 
         if (isActive) {
-            body.classList.add('no-scroll'); // Блокуємо прокрутку сторінки
+            html.classList.add('no-scroll'); 
         } else {
-            body.classList.remove('no-scroll'); // Відновлюємо прокрутку
+            html.classList.remove('no-scroll'); 
         }
     });
 } else {
     console.error('Елемент .burger-trigger, #header або .box не знайдено в DOM.');
 }
-
 
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -125,6 +125,7 @@ window.addEventListener('resize', handleResize);
 //   const bgImage = footer.getAttribute("data-bg");
 //   footer.style.background = `url(${bgImage}) center/cover no-repeat`;
 // });
+
 
 window.onload = function () {
   let footer = document.querySelector(".footer");
