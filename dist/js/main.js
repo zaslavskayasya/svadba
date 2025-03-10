@@ -186,7 +186,7 @@ for (i = 0; i < acc.length; i++) {
 
 
 let lastScrollTop = 0;
-
+let headerIs = document.querySelector('.box');
 let debounceTimeout;
 let scrollThreshold = 5; // Поріг прокрутки, щоб не реагувати на невеликі зміни
 
@@ -255,3 +255,18 @@ animations.forEach(el => {
         el.style.animationTimingFunction = timing;
 });
 
+
+
+headerIs.querySelectorAll('.menu_item').forEach(li => {
+  li.addEventListener('mouseenter', e => {
+      // let sub = li.querySelector('.sub-menu');
+      let {left: offsetLeft, width: subWidth} = sub.getBoundingClientRect();
+      let width = window.innerWidth;
+      let mustOffsetRight = 80;
+      let diff = (subWidth + offsetLeft + mustOffsetRight) - width;
+
+      // if (0 < diff){
+      //     sub.style.left = `${parseFloat(getComputedStyle(sub)['left']) - diff}px`;
+      // }
+  });
+});
