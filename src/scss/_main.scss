@@ -682,21 +682,41 @@
     display: flex;
     justify-content: space-between;
     z-index: 9;
-
     a{
       max-height: 33px;
+
       svg{
-        height: 100%;;
+        height: 100%;
+        transition: all ease 0.3s;;
+      }
+      &:hover{
+        svg{
+          path{
+            stroke: c.$accent-color;
+            transition: all ease 0.3s;
+            fill: all ease 0.3s;
+          }
+        }
+          
       }
     }
 }
 
 .footer-capitali .social-icon svg {
-    transition: stroke 0.3s;
+  transition: all ease 0.3s;
+  path{
+    transition: all ease 0.3s;
+  }
+
 }
 
-.footer-capitali .social-icon:hover svg {
-    stroke: #FFD700;
+.footer-capitali .social-icon.fill:hover svg {
+    // stroke: #FFD700;
+    transition: all ease 0.3s;
+    path{
+      fill:  c.$accent-color;
+    }
+   
 }
 
 /* Дрібний текст */
@@ -723,7 +743,7 @@
   background-color: transparent;
   color: #000;
   cursor: pointer;
-  width: 74%;
+  width: 100%;
   border: none;
   text-align: left;
   outline: none;
@@ -759,6 +779,7 @@
   position: absolute;
   top: 44px;
   right: -50px;
+  box-sizing: border-box;
 }
 
 .accordion:before {
@@ -779,6 +800,7 @@
 }
 .active:before {
   transform: rotate(90deg);
+  opacity: 0;
 }
 .accordeon-block{
   padding: 0px 0px 0px 29px;
@@ -798,7 +820,7 @@
   p {
     margin-bottom: 35px;
     margin-top: -6px;
-    padding-left: 12px;
+
     line-height: 141%;
   }
 }
@@ -1372,7 +1394,7 @@ input:focus {
   }
   .owl-images {
     width: 100%;
-    height: 395px;
+    height: 560px;
   }
   .owl-carousel{
   }
@@ -1384,7 +1406,7 @@ input:focus {
     &:before {
       content: "";
       width: 390px;
-      height: 500px;
+      height: 580px;
       position: absolute;
       top: 0px;
       left: -394px;
@@ -1444,6 +1466,8 @@ input:focus {
     padding: 3px 27px 20px;
     line-height: 133%;
     max-width: 523px;
+    text-align: left;
+    font-weight: 400;
    }
   .wawe-gallery{
     padding: 100px 20px;
@@ -1624,10 +1648,10 @@ input:focus {
     padding: 0px 0px 0px 47px;
   }
   .accordion:after {
-    right: -146px;
+    right: 0px;
   }
   .accordion:before {
-    right: -136px;
+    right: 9px;
   }
   .footer-text{
     font-size: 15px;

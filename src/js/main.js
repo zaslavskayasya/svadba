@@ -230,7 +230,7 @@ blocks.forEach(block => {
   }).observe(block);
 });
 
-let allTexts = document.querySelectorAll('p, h2');
+let allTexts = document.querySelectorAll('h2, .normal-text');
 allTexts?.forEach(item => {
     if (!item.closest('.main-slider'))
         item.classList.add('sanimate', 'fadeInUp');

@@ -55,6 +55,8 @@ body {
   .icons-set {
     padding-left: 5px;
     z-index: 10;
+    transition: all ease 0.3s;
+
     a.icon {
       width: 20px;
       display: inline-block;
@@ -70,7 +72,24 @@ body {
         &:hover {
           path {
             stroke: c.$accent-color;
+            // fill: c.$accent-color;
           }
+          
+        }
+      }
+    }
+    a.icon.fill {
+      svg {
+        transition: all ease 0.3s;
+        path {
+          transition: all ease 0.3s;
+        }
+        &:hover {
+          path {
+            // stroke: c.$accent-color;
+            fill: c.$accent-color;
+          }
+          
         }
       }
     }
@@ -162,6 +181,12 @@ body {
     justify-content: center;
     .meet-us-item {
       margin: 0px 17px 0px 0px;
+      svg{
+        path{
+          transition: all ease 0.3s;
+          
+        }
+      }
       svg {
         width: 42px;
         height: 34px;
@@ -169,6 +194,21 @@ body {
         &:hover {
           path {
             stroke: c.$accent-color;
+          }
+        }
+      }
+    }
+    .meet-us-item.fill {
+      svg {
+        path{
+          transition: all ease 0.3s;
+        }
+      }
+      svg {
+        transition: all ease 0.3s;
+        &:hover {
+          path {
+            fill: c.$accent-color;
           }
         }
       }
@@ -196,6 +236,21 @@ body {
           svg {
             path {
               stroke: c.$accent-color;
+            }
+          }
+        }
+      }
+    }
+    .contacts-list_item.fill{
+      path{
+        transition: all ease 0.3s;
+      }
+      &:hover {
+        color: c.$accent-color;
+        span.image-span {
+          svg {
+            path {
+              fill: c.$accent-color;
             }
           }
         }
@@ -346,10 +401,14 @@ body {
     }
     .dropdown-content {
       left: -63px;
+      top: 50px;
       min-height: auto;
       min-width: auto;
       background-color: #fff;
       z-index: 9;
+    }
+    .dropdown-content  a {
+      font-size: 20px;
     }
 
     menu {
@@ -448,13 +507,14 @@ body {
       z-index: 25;
     }
     .dropbtn {
-      font-size: 32px;
-      letter-spacing: 4.2px;
+      font-size: 25px;
+      font-weight: 300;
+      letter-spacing: 5.2px;
     }
     .dropbtn:before {
       width: 18px;
       height: 9px;
-      top: 31px;
+      top: 26px;
       left: -12px;
     }
     .icons-set {
