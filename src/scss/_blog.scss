@@ -240,7 +240,6 @@ ul.pagination{
     .header-picture{
         width:98%;
         height: 213px;   
-        overflow: hidden;
         margin: 0 auto;
         position: relative;
         border-radius: 18px;
@@ -741,7 +740,7 @@ ul.pagination{
         height: 535px;
     }
     .blog-one .round-block {
-        right: 0px;
+        right: -1px;
         bottom: 0;
         width: 316px;
         height: 107px;
@@ -814,6 +813,12 @@ ul.pagination{
             left: -228px;
             top: 18px;
         }
+    }
+    .blog-main.contacts-page{
+        background: linear-gradient(#fff 0%, #fff 14%, #f7f7f7 14%, #fff 100%);
+    }
+    .checkbox2 label::before{
+        top: 7px;
     }
     .article img, article img {
         width: 100%;
