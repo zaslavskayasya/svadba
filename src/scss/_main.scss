@@ -80,7 +80,7 @@
   top: 0px;
   width: 100%;
   padding: 125px 0px 0px 0px;
-  background: linear-gradient(#fff 0%, #fff 600px, #f7f7f7 600px,  #fff 100%);
+  background: linear-gradient(#fff 0%, #fff 535px, #f7f7f7 535px, #fff 100%);
 }
 
 .wrap-main-pic {
@@ -131,7 +131,7 @@
 .normal-text {
   font-family: inherit;
   line-height: 150%;
-  font-size: 17px;
+  font-size: 15px;
   color: #000;
 }
 
@@ -153,7 +153,7 @@
     content: "";
     position: absolute;
     top: -110px;
-    left: 22px;
+    left: 43px;
     width: 64px;
     height: 75px;
     background-image: url("../images/icons/arr-gold.svg");
@@ -164,7 +164,7 @@
 
 .gold-text,
 .two-text {
-  padding-left: 25px;
+  padding-left: 46px;
 }
 
 .bold-text {
@@ -227,8 +227,8 @@
   .wrap-middle {
     width: 181px;
     height: 256px;
-    top: 93px;
-    left: 0px;
+    top: 91px;
+    left: 20px;
   }
   .wrap-bottom {
     width: 183px;
@@ -251,7 +251,7 @@
   margin: 59px auto 0px;
   display: block;
   text-align: center;
-  font-weight: 800;
+  font-weight: 600;
   cursor: pointer;
   transition: all ease 0.3s;
   max-width: 300px;
@@ -264,36 +264,38 @@
 
 .about-section {
   position: relative;
-  background-color: #F2F2F2;
+  // background-color: #F2F2F2;
 }
 
 .pics-wrap {
   position: relative;
   min-height: 402px;
   .wrap-big-pic {
-    width: 206px;
-    height: 345px;
-    top: 36px;
-    left: 28px;
+    width: 188px;
+    height: 319px;
+    top: 58px;
+    left: 35px;
   }
   .wrap-pic-small {
-    width: 189px;
-    height: 240px;
+    width: 194px;
+    height: 286px;
     top: 0px;
-    right: 0px;
+    right: -9px;
   }
 }
 
 .about-section {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 0px;
+  margin-bottom: 19px;
   .type-1 {
     max-width: 200px;
     text-align: center;
     display: block;
     margin: 0 auto 47px;
-    font-size: 36px;
-    line-height: 128%;
+    font-size: 31px;
+    line-height: 131%;
+    font-weight: 300;
   }
 }
 
@@ -306,13 +308,15 @@
   flex-direction: column;
   max-width: 230px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-top: 8px;;
   &-item {
-    margin-bottom: 27px;
+    margin-bottom: 30px;
   }
   &-head {
     font-family: inherit;
     font-size: 21px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 159%;
     color: #000;
     margin-bottom: 14px;
@@ -328,7 +332,7 @@
   position: relative;
 
   .type-1{
-    font-size: 32px;
+    font-size: 31px;
     max-width: 250px;
     text-align: center;
     margin: 0 auto 46px;
@@ -433,13 +437,14 @@
   line-height: 122%;
   margin-top: -20px;
   position: absolute;
-  bottom: 14px;
+  bottom: 27px;
   left: 24px;
+  z-index: 20;
   &:before {
     content: "";
     position: absolute;
-    top: -26px;
-    left: -15px;
+    top: -37px;
+    left: -7px;
     width: 41px;
     height: 59px;
     background-image: url(../images/icons/arr-gold.svg);
@@ -460,8 +465,8 @@
 
 /* Картка */
 .gallery-item {
-  width: 48%;
-  height: 167px;
+  width: 47%;
+  height: 175px;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
@@ -470,13 +475,12 @@
 /* Обгортка для картинки */
 .image-wrapper {
   position: relative;
-  width: 169px;
-  height: 145px;
+  width: 100%;
+  height: 100%;
   display: flex;
   overflow: hidden;
   border-radius: 12px;
 }
-
 
 .image-wrapper img {
     width: 100%;
@@ -510,6 +514,8 @@
     text-decoration: none;
     text-align: center;
     z-index: 2;
+    font-weight: 500;
+    text-decoration: underline;
 }
 
 /* Анімація при наведенні */
@@ -743,16 +749,16 @@
   background-color: transparent;
   color: #000;
   cursor: pointer;
-  width: 100%;
+  width: 260px;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 21px;
+  font-size: 20px;
   transition: 0.4s;
   font-style: normal;
-  font-weight: 600;
-  line-height: 154%;
-  padding: 28px 0 30px 0px;
+  font-weight: 500;
+  line-height: 156%;
+  padding: 28px 0 20px 0px;
   position: relative;
 }
 
@@ -778,7 +784,7 @@
   background-size: cover;
   position: absolute;
   top: 44px;
-  right: -50px;
+  right: -31px;
   box-sizing: border-box;
 }
 
@@ -796,19 +802,21 @@
   background-size: cover;
   position: absolute;
   top: 35px;
-  right: -41px;
+  right: -22px;
 }
+
 .active:before {
   transform: rotate(90deg);
   opacity: 0;
 }
 .accordeon-block{
-  padding: 0px 0px 0px 29px;
+  padding: 0px 20px 0px 29px;
   margin-bottom: 70px;
 }
 .panel {
   font-family: inherit;
-  padding: 0 0px;
+  padding: 0 0px 0px 15px;
+  margin-top: 5px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -819,25 +827,35 @@
   color: #000;
   p {
     margin-bottom: 35px;
-    margin-top: -6px;
-
     line-height: 141%;
   }
 }
 .texts-side{
   .type-1{
     margin: 8px auto 41px;
-    font-size: 37px;
-    line-height: 119%;
-    width: 152px;
-    
+    font-size: 31px;
+    line-height: 129%;
+    font-weight: 300;   
   }
 }
 .strange-big-text{
-  padding: 3px 27px 20px;
+  padding: 5px 31px 20px;
   line-height: 133%;
+  text-align: left;
+  font-weight: 500;
+}
+
+.form-section{
+  .type-1{
+    margin-bottom: 26px;
+  }
+}
+
+.form-section .strange-big-text{
   text-align: center;
-  font-weight: 500;;
+  font-size: 16px;
+  line-height: 153%;
+  margin-bottom: 27px;
 }
 
 a.text-link{
@@ -857,14 +875,14 @@ a.text-link{
 
 form {
   margin-top: 20px;
-  max-width: 300px;;
+  max-width: 273px;;
   margin: 0 auto;
 }
 
 label {
   font-family: inherit;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: black;
 }
 
@@ -872,7 +890,7 @@ input {
   font-family: inherit;
   display: block;
   width: calc(100% - 147px);
-  margin: 9px 0;
+  margin: 0px 0;
   padding: 5px 0px;
   border: none;
   border-bottom: 1px solid #E6E6E6;
@@ -905,8 +923,9 @@ input:focus {
 }
 
 .group-input{
-  margin-bottom: 59px;
+  margin-bottom: 25px;
 }
+
 .checkbox, .checkbox2 {
   display: flex;
   align-items: center;
@@ -948,7 +967,7 @@ input:focus {
 /* Іконка галочки */
 .checkbox input[type="checkbox"]:checked + label:before,
 .checkbox2 input[type="checkbox"]:checked + label:before {
-  background-image: url('../images/icons/check.svg'); /* Вкажи шлях до своєї картинки галочки */
+  background-image: url('../images/icons/check2.svg'); /* Вкажи шлях до своєї картинки галочки */
   background-color: #fff;
   border-color: #fff;
 }
@@ -1071,9 +1090,13 @@ input:focus {
 }
 
 @media (min-width: 340px) {
+  .main-screen {
+    padding: 129px 0px 0px 0px;
+  }
   .h1-main {
-    padding-left: 25px;
-    padding-left: 25px;
+    padding-left: 44px;
+    line-height: 133%;
+    letter-spacing: 6px;
   }
   .wrap-main-pic {
     top: 117px;
@@ -1083,16 +1106,15 @@ input:focus {
     margin-bottom: 48px;
   }
   .texts-part{
-    padding-left: 29px;
-    padding-right: 10px;
+    padding-left: 40px;
+    padding-right: 17px;
     padding-bottom: 40px;;
   }
 }
 
 @media (min-width: 370px) {
-  .h1-main {
-    padding-left: 25px;
-    margin-bottom: 336px;
+  .h1-main {  
+    margin-bottom: 320px;
     margin-top: 22px;
   }
   .wrap-main-pic {
@@ -1139,7 +1161,7 @@ input:focus {
     justify-content: space-around;
   }
   .about-flex-item {
-    margin-bottom: 27px;
+    margin-bottom: 30px;
     max-width: 45%;
   }
 }
@@ -1354,8 +1376,17 @@ input:focus {
 
 /* Для десктопів */
 @media (min-width: 1024px) {
+  .accordion{
+    width: 93%;
+  }
   .container-main {
     width: 84%;
+  }
+  .group-input {
+    margin-bottom: 45px;
+  }
+  .form-section .strange-big-text{
+    text-align: left;
   }
   .wrap-main-pic {
     right: 38px;
@@ -1461,6 +1492,7 @@ input:focus {
   }
   .texts-side .type-1 {
     margin: 8px auto 81px 22px;
+    text-align: left;
   }
   .strange-big-text {
     padding: 3px 27px 20px;
@@ -1507,6 +1539,7 @@ input:focus {
   .about-section {
     padding-bottom: 152px;
   }
+
 }
 
 
@@ -1566,7 +1599,7 @@ input:focus {
   .accordion {    
     font-size: 24px;    
     line-height: 159%;
-    padding: 30px 0 ;
+    padding: 30px 0 ;    
   }
   .panel {   
     font-weight: 400;
@@ -1694,14 +1727,22 @@ input:focus {
     letter-spacing: 9px;
   }
   .two-text {
-    max-width: 72%;
+    max-width: 73%;
+  }
+  .texts-part {
+    padding-left: 0px;
+    padding-right: 0px;
+    .simple-text {
+      line-height: 191%;
+      font-size: 20px ;
+    }
   }
   .two-text .light-text {
     margin-top: 74px;
-    line-height: 176%;
+    line-height: 174%;
     font-size: 48px;
     max-width: 606px;
-    letter-spacing: 5px;
+    letter-spacing: 0px;
     margin-right: 140px;
   }
   .two-text .bold-text {
@@ -1719,7 +1760,6 @@ input:focus {
       #fdfdfd 100%
     );
   }
-
   .contacts-list span.image-span {
     min-width: 32px;
   }
@@ -1736,9 +1776,6 @@ input:focus {
   .about-section {
     padding-bottom: 93px;
   }
-  // .slider-block {
-  //   padding: 533px 0px 30px;
-  // }
   .pics-wrap .wrap-pic-small {
     top: 431px;
     z-index: 6;
@@ -1825,6 +1862,36 @@ input:focus {
   .pics-block .wrap-bottom {
     z-index: 99;
   }
+  .gold-text{
+    padding-left: 16.5%;
+  }
+  .gold-text:before {
+    width: 89px;
+    height: 100px;
+    top: -133px;
+    left: 244px;
+    transform: rotate(-37deg);
+  }
+  .about-section {
+    padding-top: 60px;
+  }
+  .about-section .type-1 {
+    font-size: 48px;
+    max-width: 400px;
+  }
+  .slider-block .type-1 {
+    font-size: 59px;
+    font-weight: 300;
+  }
+  .accordion {
+    width: 100%;
+  }
+  .panel{
+    padding-left: 0px;;
+  }
+  .image-wrapper {
+    height: 316px;
+  }
 }
 
 
@@ -1834,7 +1901,7 @@ input:focus {
   .pics-block .wrap-top {
     width: 543px;
     height: 372px;
-    top: -36px;
+    top: 20px;
     right: 127px;
   }
   .pics-block .wrap-middle {
@@ -1861,11 +1928,6 @@ input:focus {
     height: 872px;
     left: 464px;
     top: -174px;
-  }
-  .about-section .type-1 {
-    font-size: 53px;
-    margin-top: 10px;
-    max-width: 300px;
   }
   .positioned {
     position: absolute;
@@ -1903,10 +1965,10 @@ input:focus {
     padding-bottom: 42px;
   }
   .slider-block {
-    padding: 103px 0px 30px;
+    padding: 132px 0px 30px;
   }
   .slider-block .type-1 {
-    font-size: 70px;
+    font-size: 59px;
     letter-spacing: 3px;
     margin-bottom: 100px;
     margin: 0px 24px 147px 241px;
@@ -1971,9 +2033,13 @@ input:focus {
     padding: 260px 0px 140px;
   }
   .texts-side .type-1 {
-    margin: -4px auto 81px 92px;
-    font-size: 72px;
+    margin: -4px auto 50px 91px;
+    font-size: 60px;
   }
+  .tabs-side{
+    padding-top: 50px;;
+  }
+
   .forms-block {
     .two-sides{
       justify-content: flex-start;  
@@ -1981,6 +2047,7 @@ input:focus {
   }
   .strange-big-text {
     padding: 56px 93px 22px;
+    font-size: 20px;
   }
   form {
     margin-top: 79px;

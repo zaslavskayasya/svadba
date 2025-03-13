@@ -101,6 +101,7 @@ ul.breadcrumb {
     a{
         text-decoration: none;;
         color:#514C4C;
+        font-weight: 500;
         &:hover{
             color: c.$accent-color;
         }
@@ -108,7 +109,7 @@ ul.breadcrumb {
 }  
 ul.breadcrumb li+li:before {
     padding: 8px;
-    color: black;
+    color: #514C4C;
     content: "/\00a0";
 }  
 //   ul.breadcrumb li a {color: green;}
@@ -284,10 +285,32 @@ ul.pagination{
         right: 0px;
         bottom: -3px;
         background-size: cover;
-        width: 199px;
+        width: 189px;
         height: 68px;
         z-index: 6;
-        background-image: url('../images/icons/ro.svg');
+        background-color: #fff;
+        border-top-left-radius: 20px; 
+    
+        &:before{
+            content: "";
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: -29px;
+            bottom: -4px;
+            background-image: url(../images/icons/rl.svg);
+        }    
+        &:after{
+            content: "";
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: -3px;
+            bottom: 61px;
+            background-image: url(../images/icons/rr.svg);
+        }     
+        // clip-path: path("M0 0 H100% V100% H20 Q0 100 0 80 Z");
+        // background-image: url('../images/icons/ro.svg');
     }
     .date{
         position: absolute;
@@ -601,6 +624,15 @@ ul.pagination{
             opacity: 0.5;
         }
     }    
+    .blog-one .round-block:after{
+        content: "";
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 2px;
+        bottom: 88px;
+        background-image: url(../images/icons/rr.svg);
+    }  
     .content-part {
         padding: 0px 140px 100px 0px;
         margin: 0 auto;
@@ -711,6 +743,9 @@ ul.pagination{
     .blog-one .header-picture {
         max-width: 72%;
         margin-left: 326px;
+        margin-left: 326px;
+        margin-top: 64px;
+
     }
     .content-part {
         max-width: 68%;
@@ -742,7 +777,7 @@ ul.pagination{
     .blog-one .round-block {
         right: -3px;
         bottom: -3px;
-        width: 290px;
+        width: 260px;
         height: 94px;
     }
     .blog-one .date {
@@ -791,13 +826,7 @@ ul.pagination{
         font-size: 23px;
         letter-spacing: 6px;
     }
-    .gold-text:before {
-        width: 89px;
-        height: 100px;
-        top: -94px;
-        left: -56px;
-        transform: rotate(-37deg);
-    }
+
     .container-blog {
         width: 1195px;
         padding-left: 0px;
@@ -883,10 +912,7 @@ ul.pagination{
     .main-screen.blog-main  .forms-block .two-sides {
         justify-content: space-around;
     }
-    // .footer-info.in2  svg:first-child{
-    //     width: 30px;
-    //     height: 30px;
-    // }
+
     .footer-info.in2  svg{
         width: 28px;
         height: 28px;
@@ -894,9 +920,6 @@ ul.pagination{
     .footer-info.in2 li {
         width: 48.5%;
     }
-    // .footer-info.in2  li a{
-    //     align-items: flex-start;
-    // };
     
     .map-block {
         height: 900px;
