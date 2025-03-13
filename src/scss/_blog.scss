@@ -287,7 +287,7 @@ ul.pagination{
         width: 199px;
         height: 68px;
         z-index: 6;
-        background-image: url('../images/icons/round.svg');
+        background-image: url('../images/icons/ro.svg');
     }
     .date{
         position: absolute;
@@ -666,7 +666,7 @@ ul.pagination{
 @media (min-width: 1560px) {
     .article-name-fixed {
         position: fixed;
-        top: 600px;
+        top: 700px;
         width: 300px;
         left: 123px;
          .gold-text {
@@ -740,16 +740,18 @@ ul.pagination{
         height: 535px;
     }
     .blog-one .round-block {
-        right: -1px;
-        bottom: 0;
-        width: 316px;
-        height: 107px;
+        right: -3px;
+        bottom: -3px;
+        width: 290px;
+        height: 94px;
     }
     .blog-one .date {
         font-size: 20px;
         position: absolute;
         bottom: 13px;
         right: 41px;
+        bottom: 20px;
+        right: 46px;
     }
     .blog-one .date:before {
         left: -17px;

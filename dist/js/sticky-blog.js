@@ -15,19 +15,23 @@ document.addEventListener("DOMContentLoaded", function () {
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
 
-        if (documentHeight - (scrollY + windowHeight) < 700) {
+        if (documentHeight - (scrollY + windowHeight) < 900) {
             if (!isFixed) {
                 lastPosition = articleName.getBoundingClientRect().top + scrollY;
                 articleName.style.position = "absolute";
                 articleName.style.top = lastPosition + "px";
-                articleName.style.display = "none"; // Ховаємо елемент
+                articleName.style.height = "0"; // Приховуємо висоту
+                articleName.style.overflow = "hidden"; // Ховаємо вміст
+                articleName.style.opacity = "0"; // Плавне зникнення
                 isFixed = true;
             }
         } else {
             if (isFixed && scrollY < lastPosition) {
                 articleName.style.position = "";
                 articleName.style.top = "";
-                articleName.style.display = "block"; // Повертаємо елемент
+                articleName.style.height = ""; // Відновлюємо висоту
+                articleName.style.overflow = ""; // Відновлюємо вміст
+                articleName.style.opacity = "1"; // Плавно з’являється
                 isFixed = false;
             }
         }
