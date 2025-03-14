@@ -183,7 +183,7 @@ body {
     .meet-us-item {
       margin: 0px 17px 0px 0px;
       svg{
-        path{
+        path, rect, circle{
           transition: all ease 0.3s;
           
         }
@@ -193,7 +193,7 @@ body {
         height: 34px;
         transition: all ease 0.3s;
         &:hover {
-          path {
+          path, rect, circle {
             stroke: c.$accent-color;
           }
         }
@@ -242,25 +242,15 @@ body {
         }
       }
     }
-    .contacts-list_item.fill{
+    .contacts-list_item{
       path{
         transition: all ease 0.3s;
-      }
-      &:hover {
-        color: c.$accent-color;
-        span.image-span {
-          svg {
-            path {
-              fill: c.$accent-color;
-            }
-          }
-        }
-      }
+      }      
     }
     span.image-span {
-      width: 27px;
+      width: 29px;
       height: 36px;
-      min-width: 27px;
+      min-width: 29px;
       margin-right: 29px;
       display: block;
       position: relative;
@@ -319,7 +309,7 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     color: #000;
-    padding: 12px 25px;
+    padding: 12px 14px;
     top: 10px;
     left: -67px;
     border-radius: 15px;
@@ -451,7 +441,7 @@ body {
       top: 168px;
       flex-direction: column;
       .meet-us-item {
-        margin: 0px 11px 32px 0px;
+        margin: 0px 5px 32px 0px;
         cursor: pointer;
       }
     }
@@ -546,7 +536,7 @@ body {
       width: 35px;
     }
     .meet-us .meet-us-item {
-      margin: 0px 7px 47px 0px;
+      margin: 0px 5px 47px 0px;
     }
   }
   

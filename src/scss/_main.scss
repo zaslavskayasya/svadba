@@ -670,7 +670,7 @@
     text-decoration: underline;
 }
 
-.footer-info .icon svg {
+.footer-info .icon svg path{
     transition: stroke 0.3s;
 }
 
@@ -710,17 +710,17 @@
 
 .footer-capitali .social-icon svg {
   transition: all ease 0.3s;
-  path{
+  path, rect, circle{
     transition: all ease 0.3s;
   }
 
 }
 
-.footer-capitali .social-icon.fill:hover svg {
+.footer-capitali .social-icon:hover svg {
     // stroke: #FFD700;
     transition: all ease 0.3s;
-    path{
-      fill:  c.$accent-color;
+    path, rect, circle{
+      stroke:  c.$accent-color;
     }
    
 }
@@ -1287,7 +1287,8 @@ input:focus {
     position: absolute;
     right: -79px;
     bottom: -55px;
-    max-width: 400px;
+    max-width: max-content;
+    min-width: 400px;
   }
   .footer-content {
     max-width: 700px;
@@ -1539,6 +1540,13 @@ input:focus {
   .about-section {
     padding-bottom: 152px;
   }
+  .accordion{
+    width: 100%;;
+  }
+  .button{
+    padding: 24px 84px;
+    min-width: max-content;
+  }
 
 }
 
@@ -1669,7 +1677,7 @@ input:focus {
   .texts-side .type-1 {
     margin: 8px auto 81px 92px;
     letter-spacing: 3px;
-    font-size: 72px;
+    font-size: 60px;
   }
   .strange-big-text {
     padding: 30px 93px 22px;
@@ -1691,6 +1699,9 @@ input:focus {
   }
   .middle-text{
     max-width: 800px;;
+  }
+  .form-section{
+    margin-bottom: 150px;;
   }
   
 }
@@ -1832,7 +1843,7 @@ input:focus {
     }
   }
   .footer-info .icon.loc {
-    width: 25px;
+    width: 18px;
     margin-top: -4px;
   }
   .footer-capitali{

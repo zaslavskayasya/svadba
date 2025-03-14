@@ -420,6 +420,12 @@ ul.pagination{
 }
 
 
+.blog-main.contacts-page{
+    background: linear-gradient(#fff 0%, #fff 10%, #f7f7f7 10%, #fff 100%);
+}
+
+
+
 @media (min-width: 340px) {
     .header-picture{
         max-width: 321px;
@@ -794,6 +800,16 @@ ul.pagination{
     }
     .content-part {
         padding: 0px 180px 100px 0px;
+    }
+    .blog-main.contacts-page{
+        .gold-text:before {
+            left: 0px;
+        }
+    }
+    .blog-main{
+        .gold-text:before {
+            left: 0px;
+        }
     }
 }
 
