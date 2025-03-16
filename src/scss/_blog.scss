@@ -314,8 +314,8 @@ ul.pagination{
     }
     .date{
         position: absolute;
-        bottom: 0px;
-        right: 0px;
+        bottom: 10px;
+        right: 5px;
         z-index: 9;
         margin-bottom: 5px;
     }
@@ -347,18 +347,16 @@ ul.pagination{
 
 
 .contactpage-top{
-
     max-width: 300px;
     margin: 0 auto;
     .footer-info .icon.loc {
-        width: 28px;
+        width: 50px;
         margin-top: 10px;
         margin-left: -1px;
     }
     .footer-info .icon {
-        width: 23px;
+        width: 30px;
     }
-
     .footer-info{
         position: relative;
         flex-direction: column;
@@ -421,7 +419,7 @@ ul.pagination{
 
 
 .blog-main.contacts-page{
-    background: linear-gradient(#fff 0%, #fff 10%, #f7f7f7 10%, #fff 100%);
+    background: linear-gradient(#fff 0%, #fff 13%, #f7f7f7 13%, #fff 100%);
 }
 
 
@@ -479,6 +477,7 @@ ul.pagination{
         position: absolute;
         top: 40px;
         left: 223px;
+        z-index: 10;
     }
     .pagination a{
         font-size: 20px;
@@ -579,6 +578,13 @@ ul.pagination{
     .middle-text {
         max-width: 630px;
     }
+    .contactpage-top{
+        .footer-info .icon svg {
+            width: 30px;
+            margin-top: 4px;
+        }
+
+    }
 }
 
 
@@ -610,6 +616,9 @@ ul.pagination{
         .header-picture {
             max-width: 75%;
         }
+    }
+    .contactpage-top .footer-info .icon.loc {        
+        margin-top: 2px;
     }
 
 }
