@@ -259,7 +259,7 @@ animations.forEach(el => {
 
 headerIs.querySelectorAll('.menu_item').forEach(li => {
   li.addEventListener('mouseenter', e => {
-      // let sub = li.querySelector('.sub-menu');
+      let sub = li.querySelector('.sub-menu');
       let {left: offsetLeft, width: subWidth} = sub.getBoundingClientRect();
       let width = window.innerWidth;
       let mustOffsetRight = 80;
