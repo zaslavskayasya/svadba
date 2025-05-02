@@ -1,20 +1,31 @@
 @use "_color" as c;
 
 
-.no-scroll {
-  overflow: hidden;
-  height: 100vh; /* Фіксує висоту вікна */
-  touch-action: none; /* Забороняє свайпи на мобільних */
+.no-scroll{
+  header{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+  }
+  .icons-set{
+    opacity: 0;
+  }
 }
 
-.no-scroll body {
-  overflow: hidden;
-}
+// .no-scroll {
+//   overflow: hidden;
+//   height: 100vh; /* Фіксує висоту вікна */
+//   touch-action: none; /* Забороняє свайпи на мобільних */
+// }
 
-.box {
-  max-height: 100vh; /* Обмежує висоту */
-  overflow-y: auto; /* Дозволяє прокрутку всередині */
-}
+// .no-scroll body {
+//   overflow: hidden;
+// }
+
+// .box {
+//   max-height: 100vh; /* Обмежує висоту */
+//   overflow-y: auto; /* Дозволяє прокрутку всередині */
+// }
 
 .hide,
 .sanimate {
@@ -80,11 +91,22 @@
   top: 0px;
   width: 100%;
   overflow: hidden;
-  padding: 510px 0px 0px 110px;
-  background: linear-gradient(#000000 0%, #000000 535px, #f7f7f7 535px, #fff 100%);
+  min-height: 510px;
+  height: 510px;
+  // padding: 510px 0px 0px 110px;
+  // background: linear-gradient(#000000 0%, #000000 535px, #f7f7f7 535px, #fff 100%);
 }
+.main-screen.dark{
+  background: #000;
+}
+
+.main-screen.white{
+  background: #fff;
+  position: relative;
+}
+
 .page-content{
-  background: linear-gradient(#f7f7f7 0%, #f7f7f7 73%, #fff 73%, #fff 100%);
+  background: linear-gradient(#f7f7f7 0%, #f7f7f7 100%, #fff 100%, #fff 100%);
 }
 
 .top-screen{
@@ -123,15 +145,7 @@
   }
 }
 
-.header-main{
-  .icons-set{
-    svg{
-      path{
-        stroke: #fff;
-      }
-    }
-  }
-}
+
 
 .h1-main {
   font-family: inherit;
@@ -161,7 +175,7 @@
 
 
 .page-content{
-  padding-top: 400px;
+  padding-top: 558px;
 }
 
 
@@ -194,7 +208,8 @@
 
 .gold-text,
 .two-text {
-  padding-left: 46px;
+  padding-left: 45px;
+  padding-right: 10px;
 }
 
 .bold-text {
@@ -205,7 +220,7 @@
   line-height: 149%;
   color: c.$main-color;
   text-transform: uppercase;
-  margin-bottom: 54px;
+  margin-bottom: 45px;
 }
 
 .light-text {
@@ -254,13 +269,13 @@
     width: 226px;
     height: 151px;
     top: 0px;
-    right: 0px;
+    right: 10px;
   }
   .wrap-middle {
     width: 181px;
     height: 256px;
     top: 91px;
-    left: 20px;
+    left: 5px;
   }
   .wrap-bottom {
     width: 183px;
@@ -306,13 +321,13 @@
     width: 188px;
     height: 319px;
     top: 58px;
-    left: 35px;
+    left: 25px;
   }
   .wrap-pic-small {
     width: 194px;
     height: 286px;
     top: 0px;
-    right: -9px;
+    right: 14px;
   }
 }
 
@@ -340,7 +355,7 @@
   flex-direction: column;
   max-width: 230px;
   margin: 0 auto;
-  padding-left: 20px;
+  padding-left: 0px;
   padding-top: 8px;;
   &-item {
     margin-bottom: 30px;
@@ -512,6 +527,13 @@
   display: flex;
   overflow: hidden;
   border-radius: 12px;
+  will-change: transform;
+  &:hover{
+    img{
+      filter: brightness(0.7);
+      transform: scale(1.1);
+    }
+  }
 }
 
 .image-wrapper img {
@@ -519,20 +541,22 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: all ease 0.3s;
     transition: transform 0.4s ease, filter 0.4s ease;
+    filter: brightness(0.6);
 }
 
 /* Затемнення */
-.image-wrapper::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.27); /* Затемнення 27% */
-    transition: background 0.3s ease;
-}
+// .image-wrapper::after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(0, 0, 0, 0.27); /* Затемнення 27% */
+//     transition: background 0.3s ease;
+// }
 
 /* Текст-посилання */
 .overlay {
@@ -551,13 +575,13 @@
 }
 
 /* Анімація при наведенні */
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
+// .gallery-item:hover img {
+//     transform: scale(1.1);
+// }
 
-.gallery-item:hover .image-wrapper::after {
-    background: rgba(0, 0, 0, 0.15); /* Затемнення слабшає */
-}
+// .gallery-item:hover .image-wrapper::after {
+//     background: rgba(0, 0, 0, 0.15); /* Затемнення слабшає */
+// }
 
 .form-section{
   padding: 50px 0px
@@ -773,7 +797,7 @@
 
 .tabs-block{
   // background-color: #F7F7F7 ;
-  padding-top: 50px;
+  padding-top: 35px;
 }
 
 .accordion {
@@ -1000,7 +1024,7 @@ input:focus {
 .checkbox input[type="checkbox"]:checked + label:before,
 .checkbox2 input[type="checkbox"]:checked + label:before {
   background-image: url('../images/icons/check2.svg'); /* Вкажи шлях до своєї картинки галочки */
-  background-color: #fff;
+  background-color: transparent;
   border-color: #fff;
 }
 
@@ -1205,14 +1229,15 @@ input:focus {
 
 @media (min-width: 768px) {
   .main-screen {
-    padding: 623px 0px 0px 154px;
-    background: linear-gradient(#000000 0%, #000000 623px, #f7f7f7 623px, #fff 100%);
+    height: 672px;
+    // padding: 623px 0px 0px 154px;
+    background: #000;
   }
   .wrap-main-pic {
     width: 659px;
   }
   .page-content {
-    padding-top: 180px;
+    padding-top:680px;
   }
   .two-text .bold-text{
     color: c.$accent-color;
@@ -1442,8 +1467,9 @@ input:focus {
   .wrap-main-pic {
     right: 0;
     width: 711px;
-    top: -110px;
+    top: auto;
     left: 28%;
+    bottom: -8px;
   }
   .main-logo {
     top: 37%;
@@ -1559,7 +1585,7 @@ input:focus {
    }
   .wawe-gallery{
     padding: 100px 20px;
-    background-image: url(../images/wawe.png);
+    // background-image: url(../images/wawe.png);
     background-repeat: no-repeat;
 
   }
@@ -1696,6 +1722,11 @@ input:focus {
     display: flex;
     justify-content: space-between;
   }
+  .footer-info .icon.loc{
+    width: 20px;
+    margin-top: -5px;
+    margin-left: -2px;
+  }
   .about-section {
     padding-bottom: 93px;
     margin-bottom: 164px;
@@ -1714,7 +1745,6 @@ input:focus {
 @media (min-width: 1400px) {
   .about-section{
     background-color: #F2F2F2;
-
   }
   .positioned2,
   .positioned3 {
@@ -1766,23 +1796,30 @@ input:focus {
     margin-bottom: 150px;;
   }
   .main-screen {
-    padding: 823px 0px 0px 154px;
-    background: linear-gradient(#000000 0%, #000000 823px, #f7f7f7 823px, #F7F7F7  100%);
+    background: #000;
   }
   .wrap-main-pic {
     right: -10px;
-    width: 950px;
-    top: -172px;
+    width: 850px;
   }
   .page-content {
     padding-top: 330px;
   }
-
-  
+  .main-screen{
+    height: 772px;
+  }
+  .page-content {
+    padding-top: 780px;
+    background-color: #fff;;
+    background-image: url('../images/backwawe2.webp');
+    // background-position: bottom;
+  }
+ 
 }
 
 /* Для десктопів */
 @media (min-width: 1560px) {
+
   .h1-main {
     font-size: 74px;
     padding-left: 461px;
@@ -1825,14 +1862,15 @@ input:focus {
     font-size: 48px;
     max-width: 606px;
     letter-spacing: 0px;
-    margin-right: 140px;
+    margin-right: 80px;
   }
   .two-text .bold-text {
     letter-spacing: 11px;
     line-height: 188%;
     font-size: 40px;
     max-width: 100%;
-    margin-top: 84px;
+    margin-top: 14px;
+    padding-left: 70px;
   }
   
   .contacts-list span.image-span {
@@ -1941,14 +1979,14 @@ input:focus {
     padding-left: 16.5%;
   }
   .gold-text:before {
-    width: 89px;
-    height: 100px;
-    top: -133px;
-    left: 244px;
-    transform: rotate(-37deg);
+    width: 69px;
+    height: 105px;
+    top: -109px;
+    left: 291px;
+    transform: rotate(-10deg);
   }
   .about-section {
-    padding-top: 60px;
+    padding-top: 110px;
   }
   .about-section .type-1 {
     font-size: 48px;
@@ -1967,12 +2005,22 @@ input:focus {
   .image-wrapper {
     height: 316px;
   }
+  .main-screen {
+    height: 802px;
+  }
+  
+  .page-content {
+    padding-top: 848px;
+  }
 }
 
 
 
 /* Для десктопів */
 @media (min-width: 1750px) {
+  .page-content {
+    background-position: bottom;
+  }
   .pics-block .wrap-top {
     width: 543px;
     height: 372px;
@@ -1989,7 +2037,7 @@ input:focus {
     width: 424px;
     height: 542px;
     top: auto;
-    bottom: -591px;
+    bottom: -575px;
     right: 99px;
   }
   .wrap-two {
@@ -2074,6 +2122,15 @@ input:focus {
     width: 93px;
     height: 101px;
     transform: rotate(57deg) scaleY(-1);
+  }
+  .texts-part{
+    padding-top: 90px;
+    .simple-text{
+      margin-bottom: 60px;;
+    }
+    .button {
+      margin: 118px auto 0px;
+    }
   }
   .btn-wrap {
     width: 100%;

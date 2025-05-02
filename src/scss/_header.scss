@@ -31,7 +31,7 @@ body {
   }
   
   header {
-    padding: 23px 2px 23px 20px;
+    padding: 10px 2px 23px 2px;
     position: relative;
     // z-index: 15;;
     menu {
@@ -57,6 +57,7 @@ body {
     padding-left: 5px;
     z-index: 10;
     transition: all ease 0.3s;
+    padding-top: 5px;;
 
     a.icon {
       width: 20px;
@@ -99,10 +100,11 @@ body {
   .box {
     width: 100%;
     position: absolute;
+    height: auto;
     top: 0px;
     left: 0px;
     background-color: #fff;
-    padding: 50px 20px 180px 20px;
+    padding: 68px 20px 180px 20px;
     transform: translateX(-100%);
     opacity: 0px;
     transition: all ease 0.3s;
@@ -111,6 +113,10 @@ body {
       transform: translateX(0%);
       opacity: 1;
       z-index: 99;
+      position: fixed;
+      height: 100vh;;
+      top: 0;
+      overflow-y: scroll;
     }
   }
   
@@ -159,6 +165,23 @@ body {
     }
   }
   
+  .white .burger-trigger{
+    .burger-line{
+      background-color: #000;
+    }
+    &:hover {
+      .burger-line {
+        background-color: c.$accent-color;
+      }
+    }
+    &.active{
+      .burger-line {
+        background-color: c.$accent-color;
+      }
+
+    }
+  }
+
   header.active .burger-trigger{
     z-index: 99999;
     .burger-line {
@@ -168,11 +191,12 @@ body {
 
   menu {
     padding-left: 0px;
-    margin-bottom: 63px;
+    margin-bottom: 53px;
     li {
       list-style: none;
-      margin-bottom: 31px;
+      margin-bottom: 20px;
       text-align: center;
+     
       a {
         text-decoration: none;
         color: c.$sub-color;
@@ -228,12 +252,21 @@ body {
       }
     }
   }
-  
+
+.main-screen.dark{
+  menu li a{
+    &:hover{
+      color: #D5AF7B;
+    }
+  }
+
+}
+
   .contacts-list {
     display: block;
     margin: 0 auto 61px;
     width: 259px;
-    padding-left: 5px;
+    // padding-left: 5px;
     .contacts-list_item {
       font-family: inherit;
       font-weight: 300;
@@ -250,6 +283,7 @@ body {
           svg {
             path {
               stroke: c.$accent-color;
+              
             }
           }
         }
@@ -258,6 +292,7 @@ body {
     .contacts-list_item{
       path{
         transition: all ease 0.3s;
+        stroke-width: 2px;
       }      
     }
     span.image-span {
@@ -368,10 +403,23 @@ body {
       }
     }
     .logo-place {
-      z-index: 5;
+      z-index: 9999;
+      position: relative;
+      filter: brightness(0.5);
     }
   }
   
+  .header-main{
+    .icons-set{
+      svg{
+        path{
+          stroke: #fff;
+          stroke-width: 2px;
+        }
+      }
+    }
+  }
+
   /* мобілка велика */
   @media (min-width: 370px) {
     body {
@@ -425,13 +473,17 @@ body {
       li {
         text-align: left;
         margin-bottom: 28px;
+        max-width: 200px;
         a {
           font-size: 15px;
           letter-spacing: 1.6px;
+          color: #fff;
         }
       }
     }
-  
+    header {
+      padding: 10px 2px 23px 19px;
+    }
     // .contacts-list span.image-span , 
     .contacts-list_item{
       margin-right: 0px;
@@ -439,9 +491,9 @@ body {
       position: absolute;
       right: 20px;
       top: 78px;
-        width: 24px; 
-        right: 30px;
-        top: 91px;
+      width: 24px; 
+      right: 30px;
+      top: 91px;
       }
 
 
@@ -484,35 +536,46 @@ body {
       svg {
         path, rect, circle{
           stroke: #fff;
+          stroke-width: 2px;
         }
       }
     }
-
+    .icons-set{
+      padding-top: 12px;
+    }
+    .icons-set a.icon svg path{
+      stroke: #fff;
+      stroke-width: 2px;
+    }
   }
   
   /* Для десктопів */
   @media (min-width: 1024px) {
+    .contacts-list span.image-span{
+      margin-left: 2px;
+    }
   }
   
   /* Для десктопів */
   @media (min-width: 1560px) {
     header {
-      padding: 52px 2px 23px 60px;
+      padding: 52px 2px 23px 110px;
     }
     .logo-place {
-      width: 197px;
+      width: 220px;
     }
     menu {
-      padding-left: 64px;
-      padding-top: 66px;
+      padding-left: 120px;
+      padding-top: 37px;
       li {
-        margin-bottom: 28px;
+        margin-bottom: 23px;
         a {
-          font-size: 15px;
+          font-size: 16px;
           letter-spacing: 1.6px;
         }
       }
     }
+
     .dropdown {
       top: 51px;
       right: 44px;

@@ -98,3 +98,27 @@
     font-display: swap;
 }
 
+
+
+h1{
+    color: #121212;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 139%; /* 88.96px */
+    letter-spacing: 10.88px;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width:1200px){
+    h1{
+        font-size: 44px;
+    }
+}
+
+@media screen and (min-width:1400px){
+    h1{
+        font-size: 64px;
+    }
+}

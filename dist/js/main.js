@@ -19,9 +19,12 @@ if (triggerMenu && header && box) {
     console.error('Елемент .burger-trigger, #header або .box не знайдено в DOM.');
 }
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
+let dropTrigger = document.querySelector('.dropdown');
+let dropContent = document.querySelector('#myDropdown');
+dropTrigger.addEventListener('click', ()=>{
+  dropContent.classList.toggle("show");
+})
+
   
   // Close the dropdown menu if the user clicks outside of it
   window.onclick = function(event) {
@@ -36,7 +39,6 @@ function myFunction() {
       }
     }
   }
-
 
 let menuContent = document.querySelector('.box');
 let contactsBox = document.querySelector('.contacts-box');
@@ -76,57 +78,6 @@ handleResize();
 window.addEventListener('resize', handleResize);
 
 
-// $('.owl-carousel').owlCarousel({
-//   loop:true,
-//   margin:10,
-//   dots: false,
-//   nav: false,
-//   responsive: {
-//       0:{
-//           items:1
-//       },
-//       790:{
-//           items:3
-//       },
-//       1000:{
-//           items:1,
-//           center:true
-//           // margin:50,
-//       }
-//   }
-// })
-
-// let owl = $(".owl-carousel");
-// 	owl.owlCarousel();
-// 	$(".next-btn").click(function () {
-// 		owl.trigger("next.owl.carousel");
-// 	});
-// 	$(".prev-btn").click(function () {
-// 		owl.trigger("prev.owl.carousel");
-// 	});
-// 	$(".prev-btn").addClass("disabled");
-// 	$(owl).on("translated.owl.carousel", function (event) {
-// 		if ($(".owl-prev").hasClass("disabled")) {
-// 			$(".prev-btn").addClass("disabled");
-// 		} else {
-// 			$(".prev-btn").removeClass("disabled");
-// 		}
-// 		if ($(".owl-next").hasClass("disabled")) {
-// 			$(".next-btn").addClass("disabled");
-// 		} else {
-// 			$(".next-btn").removeClass("disabled");
-// 		}
-// 	});
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   const footer = document.querySelector(".footer");
-//   const bgImage = footer.getAttribute("data-bg");
-//   footer.style.background = `url(${bgImage}) center/cover no-repeat`;
-// });
-
-
 window.onload = function () {
   let footer = document.querySelector(".footer");
   let bgImage = footer.getAttribute("data-bg");
@@ -160,31 +111,6 @@ for (i = 0; i < acc.length; i++) {
 
 
 
-// let acc = document.getElementsByClassName("accordion");
-// let i;
-
-// for (i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener("click", function() {
-//     /* Toggle between adding and removing the "active" class,
-//     to highlight the button that controls the panel */
-//     this.classList.toggle("active");
-
-//     /* Toggle between hiding and showing the active panel */
-//     var panel = this.nextElementSibling;
-//     if (panel.style.height === "auto") {
-//       panel.style.height = "0px";
-//     } else {
-//       panel.style.height = "auto";
-//     }
-//   });
-// }
-
-
-
-
-
-
-
 let lastScrollTop = 0;
 let headerIs = document.querySelector('.box');
 let debounceTimeout;
@@ -204,12 +130,6 @@ window.addEventListener('scroll', function() {
         lastScrollTop = scrollTop;
     }, 100); // Збільшена затримка для більш плавного ефекту
 });
-
-
-// filteredMenuItems.forEach(item => {
-//   item.classList.add('sanimate', 'fadeInLeft');
-// })
-
 
 
 let blocks = document.querySelectorAll('.scroll.sanimate');
@@ -259,14 +179,16 @@ animations.forEach(el => {
 
 headerIs.querySelectorAll('.menu_item').forEach(li => {
   li.addEventListener('mouseenter', e => {
-      let sub = li.querySelector('.sub-menu');
-      let {left: offsetLeft, width: subWidth} = sub.getBoundingClientRect();
-      let width = window.innerWidth;
-      let mustOffsetRight = 80;
-      let diff = (subWidth + offsetLeft + mustOffsetRight) - width;
+    let sub = li.querySelector('.sub-menu');
+    if (!sub) return; // перевірка: якщо sub нема, нічого не робимо
 
-      // if (0 < diff){
-      //     sub.style.left = `${parseFloat(getComputedStyle(sub)['left']) - diff}px`;
-      // }
+    let {left: offsetLeft, width: subWidth} = sub.getBoundingClientRect();
+    let width = window.innerWidth;
+    let mustOffsetRight = 80;
+    let diff = (subWidth + offsetLeft + mustOffsetRight) - width;
+
+    // if (0 < diff){
+    //     sub.style.left = `${parseFloat(getComputedStyle(sub)['left']) - diff}px`;
+    // }
   });
 });

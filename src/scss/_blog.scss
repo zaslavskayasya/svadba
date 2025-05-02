@@ -1,6 +1,5 @@
 @use '_color' as c;
 
-
 .article, article{
     padding-top: 5px;
     margin-bottom: 60px;
@@ -15,37 +14,35 @@
     }
 }
 
-
-
-
 .h2{
     font-family: inherit;
     font-size: 28px;
     font-weight: 400;
     text-align: center;
-    margin-top: 0px;
-    
+    margin-top: 0px;    
 }
 
-a.h2{
-    display: inline-block;
-    text-decoration: none;
-    transition: all ease 0.3s;
-    margin-bottom: 20px;
-    color: #000;
-    &:hover{
-        color: c.$accent-color
+.article-wraps{
+    a.h2{
+        display: inline-block;
+        text-decoration: none;
+        transition: all ease 0.3s;
+        margin-bottom: 10px;
+        color: #000;
+        &:hover{
+            color: c.$accent-color
+        }
     }
 }
-
 
 .date{
     font-family: inherit;
     letter-spacing: 4px;
     text-align: center;
     position: relative;
-    margin-bottom: 43px;
-    padding-left: 20px;;
+    padding-left: 20px;
+    max-width: 303px;
+    margin: 0 auto 30px;
     &:before{
         content: "";
         position: absolute;
@@ -55,6 +52,7 @@ a.h2{
         background-size: cover;
         background-repeat: no-repeat;
         left: 60px;
+        top: -1px;
     }
 }
 
@@ -126,6 +124,7 @@ ul.pagination{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 .center-paging{
     display: flex;
@@ -154,7 +153,7 @@ ul.pagination{
 }
 
 
-.content-part{
+.content-blog{
     padding: 0px 20px 100px 20px;
     margin: 0 auto;
     p{
@@ -209,14 +208,7 @@ ul.pagination{
 
         }
     }
-    // span{
-    //     padding: 0px 10px;
-    //     transition: all ease 0.3s;
 
-    //     &:hover{
-    //         color: c.$accent-color;
-    //     }
-    // }
 }
 
 .next-block {
@@ -226,18 +218,23 @@ ul.pagination{
     svg{
         height: 26px;;
     }
-
 }
-
 
 .main-screen.blog-one{
     background: #fff;
 }
 
+.article-wraps{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
 .blog-one{
     position: relative;
     padding-top: 0px;
     padding: 0px 0px 0px;
+    width: 100%;
     .header-picture{
         width:98%;
         height: 213px;   
@@ -245,37 +242,40 @@ ul.pagination{
         position: relative;
         border-radius: 18px;
         margin: 28px auto 55px;
-
+        
     }
     .blog-header{
+        opacity: 0.3;
+        filter: brightness(1.3) contrast(0.9) saturate(1.2) opacity(0.7);
         position: absolute;
         z-index: 1;
         width: 100%;
         height: 100%;
         object-fit: cover; 
         border-radius: 18px;       
+        // filter: brightness(1.3);
+        opacity: 0.1;
     }
-    .overflow-black{
-        position: absolute;
-        left:0px;
-        top:0px;
-        background-color: black;
-        height: 100%;
-        width: 100%;
-        z-index: 2;
-        opacity: 0.3;
-        border-radius: 18px;
-        overflow: hidden;
-    }
+    // .overflow-black{
+    //     position: absolute;
+    //     left:0px;
+    //     top:0px;
+    //     background-color: black;
+    //     height: 100%;
+    //     width: 100%;
+    //     z-index: 2;
+    //     opacity: 0.3;
+    //     border-radius: 18px;
+    //     overflow: hidden;
+    // }
     .article-name{
         font-family: inherit;
         position: absolute;
         top:45px;
         z-index: 3;
-        color: #fff;
-        letter-spacing: 7px;
+        color: #000;
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: 600;
         line-height: 139%;
         font-size: 22px;
         text-align: center;
@@ -325,9 +325,7 @@ ul.pagination{
     }
 }
 
-.content-part{
-    position: relative;
-}
+
 
 .article-name-fixed{
     position: fixed;
@@ -454,11 +452,6 @@ ul.pagination{
     .article, article{
         text-align: center;
     }
-    .date:before{
-        left: 160px;
-    }
-
-
 }
 
 @media (min-width: 760px) {
@@ -482,7 +475,7 @@ ul.pagination{
     .pagination a{
         font-size: 20px;
     }
-    .content-part img {
+    .content-blog img {
         height: 450px;
     }
     .blog-one {
@@ -522,6 +515,10 @@ ul.pagination{
 }
 
 @media (min-width: 1024px) {
+    .article-wraps{
+        padding-left: 200px;
+
+    }
     article, .article{
         position: relative;
         text-align: left;;
@@ -559,7 +556,7 @@ ul.pagination{
         top: 66px;
         right: 49px;
     }
-    .content-part {
+    .content-blog {
         padding: 0px 134px 100px 20px;
         margin: 0 auto;
         max-width: 74%;
@@ -648,14 +645,14 @@ ul.pagination{
         bottom: 88px;
         background-image: url(../images/icons/rr.svg);
     }  
-    .content-part {
+    .content-blog {
         padding: 0px 140px 100px 0px;
         margin: 0 auto;
         margin-left: auto;
         max-width: 74%;
         margin-left: 14%;
     }
-    .content-part p {
+    .content-blog p {
         font-size: 19px;
         padding-left:   0px;
         margin-top: 0px;;
@@ -707,6 +704,21 @@ ul.pagination{
      menu li {
         text-align: left;
     }
+    .article-wraps {
+        padding-left: 292px;
+        padding-top: 85px;
+        padding-right: 161px;
+        article h2 a{
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+    }
+    article .date, .article .date {
+        left: -229px;
+        font-size: 19px;
+    }
+
 }
 
 
@@ -762,7 +774,7 @@ ul.pagination{
         margin-top: 64px;
 
     }
-    .content-part {
+    .content-blog {
         max-width: 68%;
         margin-left: 326px;
     }
@@ -783,10 +795,10 @@ ul.pagination{
         margin-left: 326px;
         margin-top: 78px;
     }
-    .content-part p {
+    .content-blog p {
         font-size: 24px;
     }
-    .content-part img {
+    .content-blog img {
         height: 535px;
     }
     .blog-one .round-block {
@@ -807,7 +819,7 @@ ul.pagination{
         left: -17px;
         top: 2px;
     }
-    .content-part {
+    .content-blog {
         padding: 0px 180px 100px 0px;
     }
     .blog-main.contacts-page{
@@ -881,32 +893,31 @@ ul.pagination{
         height: 567px;
     }
     .article, article {
-        margin-bottom: 107px;
+        margin-bottom: 87px;
     }
     .container-blog {    
         padding: 40px 10px 238px;
     }
     ul.pagination {
-        padding-top: 101px;
+        padding-top: 0px;
+        margin-bottom: 150px;
     }
     .pagination a {
-        font-size: 37px;
+        font-size: 29px;
         padding: 8px 21px;
     }
-    article a.h2, .article a.h2 {
-        margin-bottom: 67px;
-    }
+
     .blog-one .header-picture {
         max-width: 72%;
         height: 642px;
     }
     .blog-one .article-name {
         top: auto;
-        bottom: 58px;
-        left: 112px;
+        bottom: 166px;
+        left: 204px;
         transform: translateX(0%);
         text-align: left;
-        font-size: 69px;
+        font-size: 59px;
         max-width: 72%;
         letter-spacing: 16px;
     }
@@ -931,8 +942,8 @@ ul.pagination{
         margin-left: 20px;
         margin-top: 4px;
     }
-    .content-part {
-        padding: 0px 185px 100px 109px;
+    .content-blog {
+        padding: 311px 185px 100px 109px;
     }
     .main-screen.blog-main  .forms-block .two-sides {
         justify-content: space-around;
