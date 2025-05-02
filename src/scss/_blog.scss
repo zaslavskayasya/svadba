@@ -269,7 +269,7 @@ ul.pagination {
     z-index: 3;
     color: #000;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 139%;
     font-size: 22px;
     text-align: center;
@@ -719,7 +719,7 @@ ul.pagination {
     height: 30px;
     position: absolute;
     right: 1px;
-    bottom: 88px;
+    bottom: 104px;
   }
   .article-name-fixed {
     position: fixed;
@@ -788,8 +788,8 @@ ul.pagination {
   }
   .blog-one .header-picture {
     max-width: 72%;
-    margin-left: 326px;
-    margin-top: 78px;
+    margin-left: 342px;
+    margin-top: 91px;
   }
   .content-blog p {
     font-size: 24px;
@@ -800,16 +800,16 @@ ul.pagination {
   .blog-one .round-block {
     right: -3px;
     bottom: -3px;
-    width: 260px;
-    height: 94px;
+    width: 320px;
+    height: 110px;
   }
   .blog-one .date {
     font-size: 20px;
     position: absolute;
     bottom: 13px;
     right: 41px;
-    bottom: 20px;
-    right: 46px;
+    bottom: 33px;
+    right: 74px;
   }
   .blog-one .date:before {
     left: -17px;
@@ -833,7 +833,7 @@ ul.pagination {
 @media (min-width: 1600px) {
   ul.breadcrumb {
     top: 82px;
-    left: 359px;
+    left: 493px;
     li {
       font-size: 17px;
       font-weight: 400;
@@ -906,18 +906,19 @@ ul.pagination {
   }
 
   .blog-one .header-picture {
-    max-width: 72%;
+    max-width: 74%;
     height: 642px;
   }
   .blog-one .article-name {
     top: auto;
-    bottom: 166px;
-    left: 204px;
+    bottom: 173px;
+    left: 187px;
     transform: translateX(0%);
     text-align: left;
-    font-size: 59px;
+    font-size: 61px;
     max-width: 72%;
-    letter-spacing: 16px;
+    letter-spacing: 14px;
+    font-weight: 700;
   }
   .nav-block {
     padding: 76px 10px;
@@ -941,7 +942,7 @@ ul.pagination {
     margin-top: 4px;
   }
   .content-blog {
-    padding: 311px 185px 100px 109px;
+    padding: 311px 185px 100px 153px;
   }
   .main-screen.blog-main .forms-block .two-sides {
     justify-content: space-around;

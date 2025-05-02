@@ -19,9 +19,9 @@
     h1{
         z-index: 9;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 30%;
+        left: 10px;
+        // transform: translate(-50%, -50%);
     }
     &.blog-article-page{
         min-height: 0px;
@@ -88,6 +88,10 @@
             }
         }
     }
+    .secondary-screen h1{
+        left: 250px;
+        top:40%;
+    }
 }
 
 .content-part{
@@ -106,7 +110,8 @@ blockquote{
     .secondary-screen{
         height: 600px;
         h1{
-            left: 42%;
+            left: 340px;
+            top: 29%;
         }
     }
 }
@@ -114,7 +119,8 @@ blockquote{
 
 @media screen and (min-width: 1400px){
     .secondary-screen h1 {
-        left: 40%;
+        left: 28%;
+        top: 22%;
     }
     .white.secondary-screen .dropbtn:before{
         top: 27px;
@@ -126,7 +132,7 @@ blockquote{
     .secondary-screen {
         background-position: 90% bottom;
         h1 {
-            left: 34%;
+            left: 25%;
         }
     }
 }

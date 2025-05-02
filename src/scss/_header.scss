@@ -202,7 +202,7 @@ body {
         color: c.$sub-color;
         font-family: inherit;
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 600;
         text-transform: uppercase;
         transition: all ease 0.3s;
         text-align: inherit;
@@ -554,8 +554,13 @@ body {
     .contacts-list span.image-span{
       margin-left: 2px;
     }
+    menu {
+      padding-top: 80px;
+    }
   }
   
+
+
   /* Для десктопів */
   @media (min-width: 1560px) {
     header {
@@ -566,9 +571,8 @@ body {
     }
     menu {
       padding-left: 120px;
-      padding-top: 37px;
       li {
-        margin-bottom: 23px;
+        margin-bottom: 30px;
         a {
           font-size: 16px;
           letter-spacing: 1.6px;
