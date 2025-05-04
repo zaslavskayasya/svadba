@@ -74,12 +74,46 @@ article {
     width: 338px;
     top: 206px;
     right: -98px;
+    opacity: 0;
   }
   .gold-text {
     padding-left: 46px;
     width: 250px;
     font-size: 18px;
+    font-weight: 700;
   }
+}
+
+p.gold{
+  font-weight: inherit;
+  padding-left: 46px;
+  // width: 250px;
+  color: #D5AF7B;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+}
+.gold-text-second{
+  max-width: 600px;
+  position: relative;
+  margin-left: 23%;
+  margin-top: 61px;
+  line-height: 150%;
+  letter-spacing: 5px !important;
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      height: 89px;
+      top: -85px;
+      left: -53px;
+      width: 100px;
+      transform: rotate(-28deg);
+      background-image: url(../images/icons/arr-gold.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
 }
 
 ul.breadcrumb {
@@ -327,6 +361,7 @@ ul.pagination {
     font-family: inherit;
     color: c.$accent-color;
     font-size: 14px;
+    font-weight: 700;
   }
   .gold-text:before {
     transform: rotate(-6deg);
@@ -548,7 +583,7 @@ ul.pagination {
     padding: 0px 140px 100px 0px;
   }
   .contactpage-top {
-    padding-top: 80px;
+    padding-top: 97px;
   }
   .footer-menu {
     gap: 75px;
@@ -856,8 +891,8 @@ ul.pagination {
     max-width: 938px;
     left: 435px;
     top: 626px;
-    font-size: 23px;
-    letter-spacing: 6px;
+    font-size: 24px;
+    letter-spacing: 0px;
   }
 
   .container-blog {
@@ -985,5 +1020,9 @@ ul.pagination {
     width: 439px;
     height: 447px;
     right: -100px;
+  }
+  p.gold{
+    font-size: 24px;
+
   }
 }

@@ -39,7 +39,7 @@
         animation-delay: unset;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
-        opacity: 1;
+        // opacity: 1;
     }
 }
 
@@ -187,7 +187,7 @@
   line-height: 159%;
   color: c.$accent-color;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  // letter-spacing: 2px;
   position: relative;
   a {
     font-family: inherit;
