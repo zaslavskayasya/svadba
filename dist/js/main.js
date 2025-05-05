@@ -150,12 +150,16 @@ blocks.forEach(block => {
   }).observe(block);
 });
 
-let allTexts = document.querySelectorAll('h2, .normal-text');
-allTexts?.forEach(item => {
-    if (!item.closest('.main-slider'))
-        item.classList.add('sanimate', 'fadeInUp');
-});
 
+// const allParagraphs = document.querySelectorAll('p');
+
+// allParagraphs.forEach(paragraph => {
+//   paragraph.classList.add('sanimate','scroll' , 'fadeInUp');
+//   // Якщо потрібно виключити абзаци всередині .main-slider, розкоментуй рядок нижче:
+//   // if (!paragraph.closest('.main-slider')) {
+//   //   paragraph.classList.add('sanimate', 'fadeInUp');
+//   // }
+// });
 
 let animations = document.querySelectorAll('.sanimate');
 animations.forEach(el => {

@@ -5,7 +5,7 @@
 // c.$accent-color: #d5af7b;
 
 html{
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 body {
@@ -192,6 +192,7 @@ body {
   menu {
     padding-left: 0px;
     margin-bottom: 53px;
+
     li {
       list-style: none;
       margin-bottom: 20px;
@@ -555,6 +556,9 @@ body {
       margin-left: 2px;
     }
     menu {
+      padding-top: 36px;
+    }
+    .main-screen menu {
       padding-top: 80px;
     }
   }

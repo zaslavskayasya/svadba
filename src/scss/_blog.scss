@@ -97,8 +97,9 @@ p.gold{
 .gold-text-second{
   max-width: 600px;
   position: relative;
-  margin-left: 23%;
+  margin-left: 13%;
   margin-top: 61px;
+  font-size: 15px!important;
   line-height: 150%;
   letter-spacing: 5px !important;
     &:before{
@@ -107,8 +108,8 @@ p.gold{
       position: absolute;
       height: 89px;
       top: -85px;
-      left: -53px;
-      width: 100px;
+      left: 3px;
+      width: 50px;
       transform: rotate(-28deg);
       background-image: url(../images/icons/arr-gold.svg);
       background-size: contain;
@@ -281,21 +282,9 @@ ul.pagination {
     height: 100%;
     object-fit: cover;
     border-radius: 18px;
-    // filter: brightness(1.3);
     opacity: 0.1;
   }
-  // .overflow-black{
-  //     position: absolute;
-  //     left:0px;
-  //     top:0px;
-  //     background-color: black;
-  //     height: 100%;
-  //     width: 100%;
-  //     z-index: 2;
-  //     opacity: 0.3;
-  //     border-radius: 18px;
-  //     overflow: hidden;
-  // }
+
   .article-name {
     font-family: inherit;
     position: absolute;
@@ -337,8 +326,6 @@ ul.pagination {
       bottom: 61px;
       background-image: url(../images/icons/rr.svg);
     }
-    // clip-path: path("M0 0 H100% V100% H20 Q0 100 0 80 Z");
-    // background-image: url('../images/icons/ro.svg');
   }
   .date {
     position: absolute;
@@ -391,6 +378,10 @@ ul.pagination {
       margin-bottom: 30px;
       a {
         font-size: 20px;
+        &:hover{
+          text-decoration: none;
+          color: #D5AF7B;
+        }
       }
     }
   }
@@ -406,10 +397,10 @@ ul.pagination {
 
 .pics-cont-wrap {
   position: relative;
-  padding-bottom: 500px;
+  padding-bottom: 150px;
+  padding-top: 30px;
   .cont-im {
     border-radius: 18px;
-    position: absolute;
     overflow: hidden;
     img {
       width: 100%;
@@ -417,29 +408,18 @@ ul.pagination {
       object-fit: cover;
     }
   }
-  .cont-im1 {
-    width: 249px;
-    height: 297px;
-    top: 150px;
-    left: 15px;
-    z-index: 2;
-  }
-  .cont-im2 {
-    width: 242px;
-    height: 228px;
-    top: 0px;
-    right: 0px;
-    z-index: 1;
-  }
 }
 
-.form-button {
+.form-bottom{
   margin-bottom: 40px;
 }
 
 .blog-main.contacts-page {
   background: linear-gradient(#fff 0%, #fff 13%, #f7f7f7 13%, #fff 100%);
 }
+
+
+
 
 @media (min-width: 340px) {
   .header-picture {
@@ -529,7 +509,7 @@ ul.pagination {
     }
   }
   .contactpage-top .footer-info li {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     width: 44%;
   }
 }
@@ -600,9 +580,35 @@ ul.pagination {
       margin-top: 4px;
     }
   }
+  .form-bottom .h2{
+      margin-left: 0px;
+      text-align: left;
+      margin-bottom: 40px;
+  }
+  .form-bottom{
+    form{
+      margin-right: 30px;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
+  .gold-text-second{
+    margin-left: 23%;
+    margin-top: 61px;
+    line-height: 150%;
+    font-size: 25px!important;
+    letter-spacing: 2px!important;
+
+      &:before{
+
+        height: 89px;
+        top: -85px;
+        left: -53px;
+        width: 100px;
+
+      }
+  }
   .blog-main .wrap-main-pic {
     width: 583px;
     top: -59px;
@@ -706,6 +712,7 @@ ul.pagination {
   .strange-big-text.only-desktop {
     font-weight: 400;
     text-align: left;
+    padding-left: 0px;
   }
   .pics-cont-wrap .cont-im2 {
     right: 46px;
@@ -720,6 +727,16 @@ ul.pagination {
     bottom: 23px;
     right: 32px;
     margin-bottom: 4px;
+  }
+  .form-bottom .h2{
+    font-size: 40px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 159%; /* 101.76px */
+
   }
 }
 
@@ -863,6 +880,9 @@ ul.pagination {
       left: 0px;
     }
   }
+  .bottom-form-place{
+    max-width: 77%;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -1002,19 +1022,19 @@ ul.pagination {
     font-size: 73px;
     font-weight: 300;
   }
-  .cont-form-deco {
-    padding-top: 100px;
-  }
+  // .cont-form-deco {
+  //   padding-top: 100px;
+  // }
   .main-screen.blog-main .forms-block .two-sides form {
     margin-left: 0px;
   }
   .pics-cont-wrap {
-    padding-bottom: 625px;
+    padding-bottom: 25px;
   }
   .pics-cont-wrap .cont-im1 {
-    width: 355px;
-    height: 389px;
-    left: -100px;
+    width: 498px;
+    height: 649px;
+    // left: -100px;
   }
   .pics-cont-wrap .cont-im2 {
     width: 439px;

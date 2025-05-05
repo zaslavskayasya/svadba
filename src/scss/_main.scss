@@ -127,14 +127,16 @@
   }
 }
 
-.type-1 {
+.type-1, .form-bottom-h2 {
   font-family: inherit;
   font-weight: 300;
   font-size: 32px;
   color: c.$main-color;
   line-height: 142%;
 }
-
+.form-bottom-h2{
+  text-align: center;
+}
 .main-logo{
   position: absolute;
   top: 50%;
@@ -900,6 +902,9 @@
   line-height: 133%;
   text-align: left;
   font-weight: 500;
+  color: #000;
+  font-family: Montserrat;
+
 }
 
 .form-section{
@@ -913,6 +918,10 @@
   font-size: 16px;
   line-height: 153%;
   margin-bottom: 27px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 200%;
 }
 
 a.text-link{
@@ -1464,6 +1473,7 @@ input:focus {
   }
   .form-section .strange-big-text{
     text-align: left;
+    font-size: 20px;
   }
   .wrap-main-pic {
     right: 0;
@@ -1583,6 +1593,7 @@ input:focus {
     max-width: 523px;
     text-align: left;
     font-weight: 400;
+    font-size: 20px;
    }
   .wawe-gallery{
     padding: 100px 20px;
@@ -1611,6 +1622,10 @@ input:focus {
   }
   .texts-side{
     max-width: 40%;
+  }
+  .form-bottom-h2{
+    text-align: left;
+    font-size: 56px;
   }
 }
 
@@ -1744,6 +1759,9 @@ input:focus {
 
 
 @media (min-width: 1400px) {
+  .form-bottom-h2{
+    font-size: 64px;
+  }
   .about-section{
     background-color: #F2F2F2;
   }
@@ -1776,7 +1794,10 @@ input:focus {
     padding: 30px 93px 22px;
     line-height: 183%;
     max-width: 523px;
-    font-size: 22px;
+    font-size: 20px;
+  }
+  .form-section .strange-big-text{
+    font-size: 20px;
   }
   .accordeon-block {
     padding: 0px 0px 0px 47px;
@@ -2175,14 +2196,20 @@ input:focus {
   .texts-side .type-1 {
     margin: -4px auto 50px 91px;
     font-size: 60px;
+    line-height: 169%;
   }
   .tabs-side{
-    padding-top: 50px;;
+    padding-top: 50px;
   }
 
   .forms-block {
     .two-sides{
       justify-content: flex-start;  
+      padding-top: 20px;
+    }
+    .tabs-side{
+      padding-top: 20px;
+      margin-left: 10px;
     }
   }
   .strange-big-text {
@@ -2191,9 +2218,28 @@ input:focus {
   }
   form {
     margin-top: 79px;
+    input{
+      padding-top: 18px;
+    }
+    .button {
+      padding: 24px 138px;
+    }
+  }
+  .bottom-form-place{
+    form {
+      margin-top: 120px;
+    }
+    .two-sides{
+      justify-content: space-between;
+    }
+    .strange-big-text.only-desktop{
+      padding-top:0px;
+      margin-top: 7px;
+      font-weight: 500;
+    }
   }
   label {
-    font-size: 23px;
+    font-size: 20px;
   }
   input::placeholder{
     font-size: 20px;
