@@ -260,6 +260,13 @@ body {
       color: #D5AF7B;
     }
   }
+  .dropbtn{
+    color:#000;
+    
+  }
+  .dropbtn:before{
+      filter:brightness(0);
+  }
 
 }
 
@@ -312,7 +319,7 @@ body {
   
   /* Dropdown Button */
   .dropbtn {
-    color: #fff;
+    color: #000;
     font-family: inherit;
     font-weight: 300;
     padding: 16px;
@@ -334,6 +341,7 @@ body {
       background-size: cover;
       top: 21px;
       left: -10px;
+      filter: brightness(1.5);
     }
   }
   
