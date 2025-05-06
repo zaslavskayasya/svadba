@@ -358,7 +358,7 @@ blockquote{
             padding-left: 0px;
         }
         &.right-image-type .text-column{
-            padding-left: 0px;
+            padding-left: 38px;
             padding-top:50px;
             .image-column {
                 width: 546px;
@@ -418,5 +418,9 @@ blockquote{
             padding-top: 3px;
         }
 
+    }
+    .texts-inner p{
+        max-width: 90%;
+        margin: 0 auto 25px;
     }
 }
