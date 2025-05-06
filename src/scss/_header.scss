@@ -445,6 +445,14 @@ body {
   
   /* Для планшетів */
   @media (min-width: 768px) {
+    .main-screen.dark{
+      .dropbtn{
+        color:#fff;        
+      }
+      .dropbtn:before{
+          filter:brightness(1);
+      }    
+    }
     .only-mob {
       display: none;
     }
