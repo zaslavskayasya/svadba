@@ -132,6 +132,23 @@ window.addEventListener('scroll', function() {
 });
 
 
+const selectors = ['p', 'h2', 'blockquote'];
+
+selectors.forEach(selector => {
+  document.querySelectorAll(selector).forEach(el => {
+    el.classList.add('sanimate', 'scroll');
+  });
+});
+
+// Обробка зображень окремо, з виключенням img всередині .owl-theme
+document.querySelectorAll('img').forEach(img => {
+  if (!img.closest('.owl-theme')) {
+    img.classList.add('sanimate', 'scroll');
+  }
+});
+
+
+
 let blocks = document.querySelectorAll('.scroll.sanimate');
 // let clientsSlides = document.querySelectorAll('.clients-slider > .slide.sanimate');
 
@@ -151,15 +168,6 @@ blocks.forEach(block => {
 });
 
 
-// const allParagraphs = document.querySelectorAll('p');
-
-// allParagraphs.forEach(paragraph => {
-//   paragraph.classList.add('sanimate','scroll' , 'fadeInUp');
-//   // Якщо потрібно виключити абзаци всередині .main-slider, розкоментуй рядок нижче:
-//   // if (!paragraph.closest('.main-slider')) {
-//   //   paragraph.classList.add('sanimate', 'fadeInUp');
-//   // }
-// });
 
 let animations = document.querySelectorAll('.sanimate');
 animations.forEach(el => {

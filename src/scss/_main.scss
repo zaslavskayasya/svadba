@@ -298,7 +298,7 @@
   padding: 26px 65px;
   text-transform: uppercase;
   text-decoration: none;
-  margin: 59px auto 0px;
+  margin: 59px auto 20px;
   display: block;
   text-align: center;
   font-weight: 600;
@@ -1808,11 +1808,16 @@ input:focus {
   .accordion:before {
     right: 9px;
   }
+  .footer p{
+    font-size: 15px;
+    line-height: 130%;;
+  }
   .footer-text{
     font-size: 15px;
   }
   .middle-text{
     max-width: 800px;;
+    font-size: 15px;;
   }
   .form-section{
     margin-bottom: 150px;;
