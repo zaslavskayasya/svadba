@@ -25,6 +25,7 @@
     }
     &.blog-article-page{
         min-height: 0px;
+        margin-bottom: 0px;
     }
 }
 
@@ -123,12 +124,15 @@ blockquote{
         top: 22%;
     }
     .white.secondary-screen .dropbtn:before{
-        top: 27px;
+        top: 25px;
     }
 }
 
 
 @media screen and (min-width: 1700px){
+    .white.secondary-screen .dropbtn:before{
+        top: 27px;
+    }
     .secondary-screen {
         background-position: 90% bottom;
         h1 {

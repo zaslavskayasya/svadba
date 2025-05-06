@@ -343,6 +343,7 @@ body {
       left: -10px;
       filter: brightness(1.5);
     }
+    
   }
   
   /* Dropdown button on hover & focus */
@@ -357,6 +358,11 @@ body {
     display: block;
     margin: 0 auto;
     width: 55px;
+    &.show1{
+      button:before {
+        opacity: 0;
+      }
+    }
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -445,6 +451,13 @@ body {
   
   /* Для планшетів */
   @media (min-width: 768px) {
+    .dropdown {
+      &.show1{
+        button:before {
+          opacity: 1;
+        }
+      }
+    }
     .main-screen.dark{
       .dropbtn{
         color:#fff;        

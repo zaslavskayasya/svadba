@@ -23,6 +23,7 @@ let dropTrigger = document.querySelector('.dropdown');
 let dropContent = document.querySelector('#myDropdown');
 dropTrigger.addEventListener('click', ()=>{
   dropContent.classList.toggle("show");
+  dropTrigger.classList.toggle("show1");
 })
 
   
