@@ -1686,14 +1686,14 @@ input:focus {
   }
   .two-text .light-text {
     margin-top: 35px;
-    line-height: 176%;
-    font-size: 48px;
+    line-height: 136%;
+    font-size: 40px;
     max-width: 494px;
   }
   .two-text .bold-text {
     letter-spacing: 7px;
-    line-height: 188%;
-    font-size: 40px;
+    line-height: 138%;
+    font-size: 34px;
   }
   .pics-wrap .wrap-big-pic {
     left: 340px;
@@ -1882,6 +1882,17 @@ input:focus {
       line-height: 191%;
       font-size: 20px ;
     }
+  }
+  .two-text .light-text {
+    margin-top: 35px;
+    line-height: 176%;
+    font-size: 48px;
+    max-width: 494px;
+  }
+  .two-text .bold-text {
+    letter-spacing: 7px;
+    line-height: 188%;
+    font-size: 40px;
   }
   .two-text .light-text {
     margin-top: 74px;

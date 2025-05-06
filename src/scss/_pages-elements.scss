@@ -35,7 +35,9 @@
 .two-col{
     margin-bottom: 50px;
 }
-
+.two-col.right-image-type{
+    padding-top: 20px;
+}
 .wrp-image-column{
     width: 100%;
     border-radius: 18px;
@@ -223,7 +225,7 @@ blockquote{
     }
 
     .secondary-screen{
-        margin-bottom: 100px;
+        margin-bottom: 70px;
     }
     .content{
         max-width: 90%;        
@@ -341,15 +343,8 @@ blockquote{
 }
 
 
-@media screen and (min-width: 1400px){
-    blockquote{
-        font-size: 36px;
-        margin-bottom: 120px;
-        margin-top: 120px;
-    }
-    .secondary-screen{
-        margin-bottom: 140px;
-    }
+@media screen and (min-width: 1460px){
+
     .content{
         max-width: 1322px;
     }
@@ -376,10 +371,7 @@ blockquote{
     .two-col{
         margin-bottom: 140px;
     }
-    .reasons{
-        margin-bottom: 100px;
-        margin-top: 70px;
-    }
+
     .images-standart{
         margin-top:70px;
         margin-bottom: 80px;
@@ -390,14 +382,7 @@ blockquote{
     .page-end{
         margin-bottom: 180px;
     }
-    .images-unique{
-        margin-bottom: 180px;
-        // margin-top: 100px;
-        padding-top: 80px;
-    }
-    .slider-section h2.sections-name{
-        margin-bottom: 27px;
-    }
+
     .slider-section .reason-name{
         margin-bottom: 25px;
     }
@@ -422,5 +407,33 @@ blockquote{
     .texts-inner p{
         max-width: 90%;
         margin: 0 auto 25px;
+    }
+    .form-bottom form{
+        padding-top:20px;
+        position: sticky;
+        top:20px;
+    }
+}
+
+@media screen and (min-width: 1760px){
+    .secondary-screen{
+        margin-bottom: 140px;
+    }
+    .reasons{
+        margin-bottom: 100px;
+        margin-top: 70px;
+    }
+    blockquote{
+        font-size: 36px;
+        margin-bottom: 120px;
+        margin-top: 120px;
+    }
+    .images-unique{
+        margin-bottom: 180px;
+        // margin-top: 100px;
+        padding-top: 80px;
+    }
+    .slider-section h2.sections-name{
+        margin-bottom: 27px;
     }
 }

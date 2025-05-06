@@ -62,6 +62,17 @@ h2{
         font-size: 64px;
     }
     h2{
+        font-size: 45px;
+        margin: 40px auto 25;
+    }
+}
+
+
+@media screen and (min-width:1760px){
+    h1{
+        font-size: 64px;
+    }
+    h2{
         font-size: 48px;
         margin: 88px auto;
     }

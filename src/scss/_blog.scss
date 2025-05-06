@@ -749,7 +749,7 @@ ul.pagination {
   }
   .article-wraps {
     padding-left: 292px;
-    padding-top: 85px;
+    padding-top: 5px;
     padding-right: 161px;
     article h2 a {
       font-size: 36px;
@@ -761,6 +761,10 @@ ul.pagination {
   .article .date {
     left: -229px;
     font-size: 19px;
+    top:30px;
+  }
+  .article h2{
+    text-align: left;
   }
 }
 
@@ -1044,5 +1048,20 @@ ul.pagination {
   p.gold{
     font-size: 24px;
 
+  }
+  .article-wraps {
+    padding-left: 292px;
+    padding-top: 85px;
+    padding-right: 161px;
+    article h2 a {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+  }
+  article .date,
+  .article .date {
+    left: -229px;
+    font-size: 19px;
   }
 }
