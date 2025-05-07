@@ -143,7 +143,7 @@ selectors.forEach(selector => {
 
 // Обробка зображень окремо, з виключенням img всередині .owl-theme
 document.querySelectorAll('img').forEach(img => {
-  if (!img.closest('.owl-theme')) {
+  if (!img.closest('.owl-theme') || !img.closest('.wrp-image-column')) {
     img.classList.add('sanimate', 'scroll');
   }
 });
@@ -164,7 +164,7 @@ let observerCallback = (entries, observer) => {
 
 blocks.forEach(block => {
   new IntersectionObserver(observerCallback, {
-      threshold: 0.3
+      threshold: 0.2
   }).observe(block);
 });
 

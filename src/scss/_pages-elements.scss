@@ -311,6 +311,15 @@ blockquote{
             height: 500px;
         }
     }
+    .texts-inner{
+        .sections-name.left{
+            margin-bottom: 20px;
+        }        
+    }
+    .sections-name.margin100{
+        margin-bottom: 50px;
+
+    }
 }
 
 
@@ -391,6 +400,17 @@ blockquote{
         padding-top: 44px;
     }
     .slider-section{
+        .btn-wrap{ 
+            padding-right: 0px;
+            .prev-btn svg{
+                width: 30px;
+                height: 25px;
+            }
+
+         }
+    }
+
+    .slider-section{
         .btn-wrap{
             margin-left: 0px;
         }
@@ -405,14 +425,25 @@ blockquote{
         }
 
     }
+
     .texts-inner p{
         max-width: 90%;
-        margin: 0 auto 25px;
+        margin: 0 auto 30px;
+    }
+    .texts-inner{
+        .sections-name.left{
+            margin-left: 60px;
+            margin-bottom: 60px;
+        }        
     }
     .form-bottom form{
         padding-top:20px;
         position: sticky;
         top:20px;
+    }
+    .sections-name.margin100{
+        margin-bottom: 100px;
+
     }
 }
 

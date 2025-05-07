@@ -144,7 +144,7 @@ ul.breadcrumb li {
 ul.breadcrumb li + li:before {
   padding: 8px;
   color: #514c4c;
-  content: "/\00a0";
+  content: "-";
 }
 //   ul.breadcrumb li a {color: green;}
 .blog-main {
@@ -893,6 +893,16 @@ ul.pagination {
   .gold-text-second{
     margin-top: -90px;
   }
+  .pagination a.prev {
+    padding: 8px 21px 8px 0px;
+    svg{
+      width: 33px;
+      height: 25px;;
+    }
+  }
+  .pagination a.next {
+    padding: 8px 0px 8px 21px;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -989,7 +999,7 @@ ul.pagination {
     font-weight: 700;
   }
   .nav-block {
-    padding: 76px 10px;
+    padding: 76px 0px;
   }
   .next-block a,
   .prev-block a {
@@ -1002,19 +1012,25 @@ ul.pagination {
   .prev-block a svg {
     min-width: 56px;
     height: 20px;
+    padding-left: 0px;
   }
   .next-block a svg {
     min-width: 83px;
     height: 51px;
     margin-left: 20px;
     margin-top: 4px;
+    padding-right: 0px;
   }
   .blog-one .article-name{
     left: 135px;
   }
   .content-blog {
-    padding: 305px 187px 100px 150px;
+    padding: 336px 187px 100px 150px;
 
+  }
+  .content-blog img {
+    height: 486px;
+    margin-bottom: 50px;
   }
   .main-screen.blog-main .forms-block .two-sides {
     justify-content: space-around;
@@ -1077,4 +1093,5 @@ ul.pagination {
     left: -229px;
     font-size: 19px;
   }
+  
 }
