@@ -98,7 +98,8 @@ p.gold{
   max-width: 600px;
   position: relative;
   margin-left: 13%;
-  margin-top: 61px;
+  // margin-top: 61px;
+  margin-top: -20px;
   font-size: 15px!important;
   line-height: 150%;
   letter-spacing: 5px !important;
@@ -375,7 +376,7 @@ ul.pagination {
     justify-content: space-between;
     margin-bottom: 0px;
     li {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       a {
         font-size: 20px;
         &:hover{
@@ -888,6 +889,9 @@ ul.pagination {
   }
   .bottom-form-place{
     max-width: 77%;
+  }
+  .gold-text-second{
+    margin-top: -90px;
   }
 }
 

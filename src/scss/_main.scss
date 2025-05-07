@@ -510,7 +510,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    padding: 0px 20px 50px;
+    padding: 0px 20px 20px;
 }
 
 /* Картка */
@@ -597,6 +597,7 @@
   padding: 40px 15px;
   color: #000;
   text-align: center;
+  margin-top: 30px;
   
 
 }
@@ -1954,6 +1955,7 @@ input:focus {
   }
   .footer {
     padding: 269px 15px;
+    margin-top: 60px;
   }
   .footer-content {
     max-width: 1622px;
