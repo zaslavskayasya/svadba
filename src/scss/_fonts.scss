@@ -72,8 +72,11 @@ h2{
     h1{
         font-size: 64px;
     }
-    h2{
-        font-size: 48px;
-        margin: 88px auto;
+    .article-wraps{        
+        h2{
+
+            margin: 24px auto;
+        }
     }
+
 }
