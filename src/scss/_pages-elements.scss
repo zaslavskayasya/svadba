@@ -199,9 +199,55 @@ blockquote{
 
 }
 
+.for-404{
+    height: 100vh;
+    margin-bottom: 0px;
+
+}
+.s-404{
+    height: 100vh;
+    background-position: center;
+    margin-bottom: 0px;
+}
+
+.page-404-name{
+    text-align: center;
+    font-size: 50px ;
+    font-weight: 700;
+    font-family: Montserrat;
+    margin-bottom: 0px;
+}
+
+.sorry{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-family: Montserrat;
+    margin-bottom: 25px;
+}
+
+.alternate{
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.for-link{
+    color: #000;
+    transition: all ease 0.3s;
+    &:hover{
+        color: #D5AF7B;
+    }
+}
 
 
-
+.wrap-information{
+    padding:  0px 15px;
+    .button{
+        padding: 15px 55px;
+        font-size: 13px;
+        // background-color: ;
+    }
+}
 
 
 @media screen and (min-width: 470px){
@@ -269,6 +315,24 @@ blockquote{
         margin: 0px -20px;
         padding: 0px 20px;
 
+    }
+    .wrap-information{
+        max-width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+
+    }
+    .page-404-name{
+        font-size: 100px;
+    }
+    .sorry{
+        font-size: 26px;
+    }
+    .alternate{
+        font-size: 20px;
     }
 }
 
@@ -444,6 +508,29 @@ blockquote{
     .sections-name.margin100{
         margin-bottom: 100px;
 
+    }
+      .wrap-information{
+        max-width: 80%;
+        .button{
+            padding: 25px 80px;
+            font-size: 20px;
+        }
+    }
+    .page-404-name{
+        font-size: 153px;
+        letter-spacing: 20px;
+        margin-bottom:-23px;
+    }
+    .sorry{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 143%;
+    }
+    .alternate{
+        font-size: 24px;
+        line-height: 169%;
+        margin-bottom: 45px;
+        font-weight: 700;
     }
 }
 
